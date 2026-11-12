@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 68 68" width="512" height="512">
+  <title>AZA DIGITAL ECOSYSTEM</title>
+  <defs><linearGradient id="m-peak" x1="32" y1="8" x2="32" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset=".48" stop-color="#BDF1FF"/><stop offset="1" stop-color="#4E9BFF"/>
+    </linearGradient>
+    <linearGradient id="m-orbit" x1="4" y1="48" x2="60" y2="37" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF6B3D"/><stop offset="1" stop-color="#FFC94D"/>
+    </linearGradient>
+    <radialGradient id="m-glow">
+      <stop offset="0" stop-color="#FFD978" stop-opacity=".9"/><stop offset="1" stop-color="#FFB840" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="m-gap" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff"/>
+      <path d="M3.634 49.029A29 8-12 0 0 60.366 36.971" fill="none" stroke="#000" stroke-width="7.4" stroke-linecap="round"/>
+    </mask></defs>
+  <path d="M3.634 49.029A29 8-12 0 1 60.366 36.971" fill="none" stroke="url(#m-orbit)" stroke-width="3.2" stroke-linecap="round" opacity=".55"/>
+    <path d="M8 56 32 8 56 56H44.6L32 30.8 19.4 56Z" fill="url(#m-peak)" mask="url(#m-gap)"/>
+    <path d="M3.634 49.029A29 8-12 0 0 60.366 36.971" fill="none" stroke="url(#m-orbit)" stroke-width="3.2" stroke-linecap="round"/>
+    <circle cx="58.41" cy="40.84" r="7" fill="url(#m-glow)"/>
+    <circle cx="58.41" cy="40.84" r="3.3" fill="#FFE7A3"/>
+</svg>

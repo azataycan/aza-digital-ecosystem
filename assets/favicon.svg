@@ -1,10 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="34" y2="34">
-      <stop stop-color="#4F7CFF"/><stop offset="1" stop-color="#9B5CFF"/>
+    <linearGradient id="f-bg" x1="0" y1="0" x2="0" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#16206A"/><stop offset="1" stop-color="#060A24"/>
     </linearGradient>
+    <linearGradient id="f-peak" x1="32" y1="8" x2="32" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset=".48" stop-color="#BDF1FF"/><stop offset="1" stop-color="#4E9BFF"/>
+    </linearGradient>
+    <linearGradient id="f-orbit" x1="4" y1="48" x2="60" y2="37" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF6B3D"/><stop offset="1" stop-color="#FFC94D"/>
+    </linearGradient>
+    <radialGradient id="f-glow">
+      <stop offset="0" stop-color="#FFD978" stop-opacity=".9"/><stop offset="1" stop-color="#FFB840" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="f-gap" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff"/>
+      <path d="M3.634 49.029A29 8-12 0 0 60.366 36.971" fill="none" stroke="#000" stroke-width="7.4" stroke-linecap="round"/>
+    </mask>
   </defs>
-  <rect width="34" height="34" rx="9" fill="url(#g)"/>
-  <path d="M10 24L17 9l7 15" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <path d="M13.2 18.5h7.6" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+  <rect width="64" height="64" rx="15" fill="url(#f-bg)"/>
+  <g transform="translate(5.5 4.5) scale(.83)"><path d="M3.634 49.029A29 8-12 0 1 60.366 36.971" fill="none" stroke="url(#f-orbit)" stroke-width="3.2" stroke-linecap="round" opacity=".55"/>
+    <path d="M8 56 32 8 56 56H44.6L32 30.8 19.4 56Z" fill="url(#f-peak)" mask="url(#f-gap)"/>
+    <path d="M3.634 49.029A29 8-12 0 0 60.366 36.971" fill="none" stroke="url(#f-orbit)" stroke-width="3.2" stroke-linecap="round"/>
+    <circle cx="58.41" cy="40.84" r="7" fill="url(#f-glow)"/>
+    <circle cx="58.41" cy="40.84" r="3.3" fill="#FFE7A3"/></g>
 </svg>
