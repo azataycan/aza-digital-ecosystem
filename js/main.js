@@ -225,7 +225,7 @@
                         const pd = Math.sqrt(mx * mx + my * my);
                         if (pd < 220) alpha += (1 - pd / 220) * 0.42 * k;
                     }
-                    ctx.strokeStyle = 'rgba(150,205,255,' + alpha.toFixed(3) + ')';
+                    ctx.strokeStyle = 'rgba(77,238,220,' + alpha.toFixed(3) + ')';
                     ctx.beginPath();
                     ctx.moveTo(a.px, a.py);
                     ctx.lineTo(b.px, b.py);
@@ -236,7 +236,7 @@
             for (const s of stars) {
                 const tw = reduceMotion ? 1 : 0.62 + 0.38 * Math.sin(t * 0.001 * s.tw + s.ph);
                 ctx.globalAlpha = s.a * tw;
-                ctx.fillStyle = s.gold ? '#FFD58A' : '#DCE8FF';
+                ctx.fillStyle = s.gold ? '#B9FF55' : '#C8FFF5';
                 if (s.r > 1.1) {
                     ctx.beginPath();
                     ctx.arc(s.px, s.py, s.r, 0, Math.PI * 2);
@@ -262,8 +262,8 @@
                 const tx = shoot.x - shoot.vx * 16, ty = shoot.y - shoot.vy * 16;
                 const fade = Math.max(0, 1 - shoot.life / 60);
                 const g = ctx.createLinearGradient(shoot.x, shoot.y, tx, ty);
-                g.addColorStop(0, 'rgba(255,238,205,' + fade.toFixed(3) + ')');
-                g.addColorStop(1, 'rgba(255,238,205,0)');
+                g.addColorStop(0, 'rgba(211,255,245,' + fade.toFixed(3) + ')');
+                g.addColorStop(1, 'rgba(211,255,245,0)');
                 ctx.strokeStyle = g;
                 ctx.lineWidth = 1.6;
                 ctx.beginPath();
@@ -390,17 +390,17 @@
             const sunY = horizon + 6;
             const big = Math.max(w, h);
             let g = ctx.createRadialGradient(sunX, sunY, 0, sunX, sunY, big * 0.6);
-            g.addColorStop(0, 'rgba(255,196,92,0.5)');
-            g.addColorStop(0.16, 'rgba(255,140,70,0.2)');
-            g.addColorStop(0.45, 'rgba(110,60,150,0.07)');
+            g.addColorStop(0, 'rgba(67,255,190,0.38)');
+            g.addColorStop(0.16, 'rgba(0,216,240,0.22)');
+            g.addColorStop(0.45, 'rgba(32,150,130,0.08)');
             g.addColorStop(1, 'rgba(0,0,0,0)');
             ctx.fillStyle = g;
             ctx.fillRect(0, 0, w, h);
             const sr = Math.min(w, h) * (small ? 0.075 : 0.06);
             g = ctx.createRadialGradient(sunX, sunY, 0, sunX, sunY, sr);
-            g.addColorStop(0, 'rgba(255,248,222,1)');
-            g.addColorStop(0.55, 'rgba(255,214,120,0.95)');
-            g.addColorStop(1, 'rgba(255,170,70,0)');
+            g.addColorStop(0, 'rgba(235,255,250,1)');
+            g.addColorStop(0.55, 'rgba(178,255,92,0.92)');
+            g.addColorStop(1, 'rgba(0,216,240,0)');
             ctx.fillStyle = g;
             ctx.beginPath();
             ctx.arc(sunX, sunY, sr, 0, Math.PI * 2);
@@ -425,9 +425,9 @@
                 }
                 const near = 1 - depth;
                 const warm = Math.pow(depth, 1.3) * 0.9;
-                const cr = Math.round(lerp(114, 255, warm));
-                const cg = Math.round(lerp(228, 188, warm));
-                const cb = Math.round(lerp(255, 96, warm));
+                const cr = Math.round(lerp(38, 155, warm));
+                const cg = Math.round(lerp(232, 255, warm));
+                const cb = Math.round(lerp(242, 92, warm));
                 const edge = depth > 0.92 ? (1 - depth) / 0.08 : 1;
 
                 if (minY < h + 40) {
@@ -447,7 +447,7 @@
                     ctx.lineTo(pts[(cols - 1) * 2], h + 20);
                     ctx.lineTo(pts[0], h + 20);
                     ctx.closePath();
-                    ctx.fillStyle = 'rgb(7,11,38)';
+                    ctx.fillStyle = 'rgb(3,14,19)';
                     ctx.fill();
 
                     ctx.beginPath();
