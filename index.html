@@ -3,388 +3,748 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AZA Digital Ecosystem — объединяем цифровые продукты в одну экосистему: финтех, e-commerce, облака, образование и госуслуги.">
-    <title>AZA Digital Ecosystem — цифровая экосистема</title>
+    <title>AZA DIGITAL ECOSYSTEM</title>
+    <meta name="description" content="AZA DIGITAL ECOSYSTEM — экосистема цифровых продуктов: PAR ORDO PRO, PAR ORDO GO, MOI MARKET PRO, AZA CONNECT, AZA BUSINESS PRO. Основатель — Азамат Акматов. WhatsApp: +996 507 66 88 66.">
+    <meta name="theme-color" content="#060A24">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AZA DIGITAL ECOSYSTEM">
+    <meta property="og:description" content="Экосистема цифровых продуктов для бизнеса и клиентов. Основатель — Азамат Акматов.">
+    <!-- Для превью ссылки в WhatsApp/Telegram укажите полный адрес сайта: https://ВАШ-САЙТ/assets/og-image.png -->
+    <meta property="og:image" content="assets/og-image.png">
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        document.documentElement.classList.add('js', 'is-loading');
+        window.__azaFailsafe = setTimeout(function () {
+            var r = document.documentElement;
+            r.classList.remove('is-loading');
+            r.classList.add('is-ready', 'is-failsafe');
+        }, 8000);
+    </script>
 </head>
 <body>
 
-    <!-- ===== ШАПКА ===== -->
-    <header class="header" id="header">
-        <div class="container header__inner">
-            <a href="#hero" class="logo" aria-label="AZA Digital Ecosystem">
-                <svg class="logo__mark" width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
-                    <rect width="34" height="34" rx="9" fill="url(#g1)"/>
-                    <path d="M10 24L17 9l7 15" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M13.2 18.5h7.6" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
-                    <defs>
-                        <linearGradient id="g1" x1="0" y1="0" x2="34" y2="34">
-                            <stop stop-color="#4F7CFF"/><stop offset="1" stop-color="#9B5CFF"/>
-                        </linearGradient>
-                    </defs>
-                </svg>
-                <span class="logo__text">AZA<em>digital</em></span>
-            </a>
+<!-- ============ SVG: градиенты, эмблема, иконки ============ -->
+<svg class="defs" aria-hidden="true" focusable="false">
+    <defs>
+        <linearGradient id="e-peak" x1="32" y1="8" x2="32" y2="56" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#FFFFFF"/><stop offset=".48" stop-color="#BDF1FF"/><stop offset="1" stop-color="#4E9BFF"/>
+        </linearGradient>
+        <linearGradient id="e-orbit" x1="4" y1="48" x2="60" y2="37" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#FF6B3D"/><stop offset="1" stop-color="#FFC94D"/>
+        </linearGradient>
+        <radialGradient id="e-glow">
+            <stop offset="0" stop-color="#FFD978" stop-opacity=".95"/><stop offset="1" stop-color="#FFB840" stop-opacity="0"/>
+        </radialGradient>
+        <mask id="e-gap" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+            <rect width="64" height="64" fill="#fff"/>
+            <path d="M3.634 49.029A29 8-12 0 0 60.366 36.971" fill="none" stroke="#000" stroke-width="7.4" stroke-linecap="round"/>
+        </mask>
+        <clipPath id="e-front"><path d="M-6 51.08 70 34.92 70 80-6 80Z"/></clipPath>
+    </defs>
 
-            <nav class="nav" id="nav" aria-label="Основная навигация">
-                <a href="#projects" class="nav__link">Проекты</a>
-                <a href="#ecosystem" class="nav__link">Экосистема</a>
-                <a href="#advantages" class="nav__link">Преимущества</a>
-                <a href="#about" class="nav__link">О нас</a>
-                <a href="#contact" class="nav__link">Контакты</a>
-                <a href="#contact" class="btn btn--small nav__cta">Связаться</a>
-            </nav>
+    <!-- Эмблема: тоо-чоку «A» + орбита экосистемы -->
+    <symbol id="emblem" viewBox="0 0 64 64" overflow="visible">
+        <path d="M3.634 49.029A29 8-12 0 1 60.366 36.971" fill="none" stroke="url(#e-orbit)" stroke-width="3.2" stroke-linecap="round" opacity=".55"/>
+        <g>
+            <circle r="6.5" fill="url(#e-glow)"/><circle r="3.1" fill="#FFE7A3"/>
+            <animateMotion dur="7s" repeatCount="indefinite" path="M3.634 49.029A29 8-12 1 1 60.366 36.971A29 8-12 1 1 3.634 49.029"/>
+        </g>
+        <path d="M8 56 32 8 56 56H44.6L32 30.8 19.4 56Z" fill="url(#e-peak)" mask="url(#e-gap)"/>
+        <path d="M3.634 49.029A29 8-12 0 0 60.366 36.971" fill="none" stroke="url(#e-orbit)" stroke-width="3.2" stroke-linecap="round"/>
+        <g clip-path="url(#e-front)">
+            <g>
+                <circle r="6.5" fill="url(#e-glow)"/><circle r="3.1" fill="#FFE7A3"/>
+                <animateMotion dur="7s" repeatCount="indefinite" path="M3.634 49.029A29 8-12 1 1 60.366 36.971A29 8-12 1 1 3.634 49.029"/>
+            </g>
+        </g>
+    </symbol>
 
-            <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
+    <!-- Сөз белгиси AZA -->
+    <symbol id="wordmark" viewBox="0 0 128 40">
+        <g fill="currentColor">
+            <path d="M0 40 20 0 40 40H30.5L20 19 9.5 40Z"/>
+            <path d="M46 0H82V7.5L58.4 32.5H82V40H46V32.5L69.6 7.5H46Z"/>
+            <path d="M88 40 108 0 128 40H118.5L108 19 97.5 40Z"/>
+        </g>
+        <g fill="#FFC24A"><circle cx="20" cy="31.5" r="3.3"/><circle cx="108" cy="31.5" r="3.3"/></g>
+    </symbol>
 
-    <main>
-        <!-- ===== ГЛАВНЫЙ ЭКРАН ===== -->
-        <section class="hero" id="hero">
-            <div class="hero__glow hero__glow--1"></div>
-            <div class="hero__glow hero__glow--2"></div>
-            <div class="container hero__inner">
-                <span class="badge reveal">Презентация цифровой экосистемы</span>
-                <h1 class="hero__title reveal">AZA <span>Digital</span> Ecosystem</h1>
-                <p class="hero__subtitle reveal">
-                    Объединяем финтех, e-commerce, облачные сервисы, образование
-                    и государственные услуги в единую цифровую среду —
-                    удобную для людей и бизнеса.
-                </p>
-                <div class="hero__actions reveal">
-                    <a href="#projects" class="btn">Смотреть проекты</a>
-                    <a href="#contact" class="btn btn--ghost">Стать партнёром</a>
-                </div>
+    <!-- Иконки -->
+    <symbol id="i-wa" viewBox="0 0 24 24">
+        <path d="M12 3.2a8.8 8.8 0 0 0-7.6 13.2L3.2 20.8l4.5-1.2A8.8 8.8 0 1 0 12 3.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M9.2 7.4c.3 0 .6.1.7.5l.8 1.9c.1.3.1.5-.1.7l-.6.7c-.1.2-.2.4 0 .6.6 1.1 1.5 2 2.6 2.6.2.1.4.1.6-.1l.7-.6c.2-.2.4-.2.7-.1l1.9.8c.4.2.5.4.5.7-.1 1.1-1 1.9-2.1 1.9-3.9-.2-7.1-3.4-7.3-7.3 0-1.1.8-2 1.9-2.2z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2.5"/><path d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4h-9A1.5 1.5 0 0 0 4 5.5v9A1.5 1.5 0 0 0 5.5 16H8"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 10.5 12 4l8.5 6.5V19a1.5 1.5 0 0 1-1.5 1.5h-4v-6H9v6H5A1.5 1.5 0 0 1 3.5 19z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8.5" r="3.5"/><path d="M2.8 20c.7-3.4 3.2-5.3 6.2-5.3s5.5 1.9 6.2 5.3M15.5 5.2a3.5 3.5 0 0 1 0 6.6M18 14.9c1.6.8 2.7 2.4 3.1 5.1"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="3"/><path d="M3 10.5h18"/><circle cx="16.5" cy="15" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M7 16v-4M12 16V8M17 16V5"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 7.5 12 3.5l8.5 4v9L12 20.5l-8.5-4zM3.5 7.5 12 11.5l8.5-4M12 11.5v9"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5h2.4l2.1 10.5h10.3L20.5 8H6.4"/><circle cx="9.5" cy="19" r="1.4"/><circle cx="16.5" cy="19" r="1.4"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.6l2.5 5.2 5.7.8-4.1 4 1 5.7L12 16.6l-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5.5v13M5.5 12h13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M4.5 11.5 20 4.5l-5 15.5-2.8-6.2zM12.2 13.8 20 4.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-dots" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="19" cy="12" r="1.7"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 1.5 14.4 9.6 22.5 12l-8.1 2.4L12 22.5l-2.4-8.1L1.5 12l8.1-2.4z" fill="currentColor"/></symbol>
+    <symbol id="i-steam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3.5c-1.4 1.4-1.4 2.8 0 4.2s1.4 2.8 0 4.2M12 3.5c-1.4 1.4-1.4 2.8 0 4.2s1.4 2.8 0 4.2M16 3.5c-1.4 1.4-1.4 2.8 0 4.2s1.4 2.8 0 4.2M4 16h16M6.5 20h11"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5 5.6 4h12.8L20 9.5M4 9.5h16M5 9.5v10.5h14V9.5M10 20v-5.5h4V20"/></symbol>
+    <symbol id="i-coffee" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5zM16 10.5h1.5a2.5 2.5 0 0 1 0 5H16M8.5 3.5c-.6.8.6 1.7 0 2.5M12.5 3.5c-.6.8.6 1.7 0 2.5"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.5" cy="7" r="2.5"/><circle cx="6.5" cy="17" r="2.5"/><path d="M8.6 8.4 20 17.5M8.6 15.6 20 6.5"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 17v2.5M18.5 17v2.5M3.5 17h17v-4.5l-2.2-5H5.7l-2.2 5zM3.5 12.5h17"/><circle cx="7.5" cy="14.8" r=".9" fill="currentColor"/><circle cx="16.5" cy="14.8" r=".9" fill="currentColor"/></symbol>
+    <symbol id="i-cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3.5h5v6h6v5h-6v6h-5v-6h-6v-5h6z"/></symbol>
+    <symbol id="i-bed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6.5v13M3 15.5h18v4M21 15.5V13a3 3 0 0 0-3-3h-7.5v5.5"/><circle cx="7" cy="12.3" r="1.8"/></symbol>
+    <symbol id="i-dumbbell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 7.5v9M17.5 7.5v9M3.5 10v4M20.5 10v4M6.5 12h11"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 6.5H14V16H2.5zM14 10h4l3.5 3.5V16H14"/><circle cx="6.5" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></symbol>
+    <symbol id="i-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12h4l2-4.5 3.5 9 2.5-6 1.5 1.5h5.5"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15.5H6.5A1.5 1.5 0 0 0 5 20zM5 20a1.5 1.5 0 0 0 1.5 1.5H19M9 7h6"/></symbol>
+    <symbol id="i-headphones" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 15v-3a7.5 7.5 0 0 1 15 0v3M4.5 14.5h3v6h-2a1 1 0 0 1-1-1zM19.5 14.5h-3v6h2a1 1 0 0 0 1-1z"/></symbol>
+    <symbol id="i-sneaker" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17V9.5l4 1.2 2.7-3.2 3.3 3c2.2 2 5.3 2.6 8 3.2a1.5 1.5 0 0 1 1 1.4V17zM2.5 17v2h19v-2M9.2 10.6l-1.4 1.6M11.6 12.6l-1.4 1.6"/></symbol>
+    <symbol id="i-backpack" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9.5a6 6 0 0 1 12 0V20a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zM9.5 4.2V3h5v1.2M9 14h6v3H9z"/></symbol>
+    <symbol id="i-watch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5.2"/><path d="M9.2 7.4 9.8 3h4.4l.6 4.4M9.2 16.6l.6 4.4h4.4l.6-4.4M12 9.8v2.4l1.5 1.2"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 4h13A1.5 1.5 0 0 1 20 5.5v9a1.5 1.5 0 0 1-1.5 1.5H10l-4.5 4V16A1.5 1.5 0 0 1 4 14.5v-9A1.5 1.5 0 0 1 5.5 4z"/></symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 12.5h18"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2.5h8a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2zM10.5 18.5h3"/></symbol>
+</svg>
 
-                <div class="stats reveal">
-                    <div class="stat">
-                        <div class="stat__value" data-count="6" data-suffix="+">0</div>
-                        <div class="stat__label">цифровых продуктов</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat__value" data-count="1" data-suffix="M+">0</div>
-                        <div class="stat__label">пользователей</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat__value" data-count="99" data-suffix="%">0</div>
-                        <div class="stat__label">время доступности</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat__value" data-count="24" data-suffix="/7">0</div>
-                        <div class="stat__label">поддержка</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<a class="skip" href="#projects">Перейти к проектам</a>
 
-        <!-- ===== ПРОЕКТЫ (для презентации) ===== -->
-        <section class="section section--alt" id="projects">
-            <div class="container">
-                <div class="section__head reveal">
-                    <span class="badge badge--outline">Проекты</span>
-                    <h2 class="section__title">Проекты экосистемы</h2>
-                    <p class="section__text">Нажмите «Подробнее», чтобы показать детали проекта на презентации.</p>
-                </div>
+<!-- ============ ИНТРО: открытие сайта ============ -->
+<div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__half intro__half--top"></div>
+    <div class="intro__half intro__half--bottom"></div>
+    <div class="intro__seam"></div>
+    <div class="intro__center">
+        <svg class="intro__mark" viewBox="0 0 64 64" overflow="visible">
+            <path class="im-ob" pathLength="1" d="M3.634 49.029A29 8-12 0 1 60.366 36.971" fill="none" stroke="url(#e-orbit)" stroke-width="3.2" stroke-linecap="round" opacity=".55"/>
+            <g class="im-sat">
+                <circle r="6.5" fill="url(#e-glow)"/><circle r="3.1" fill="#FFE7A3"/>
+                <animateMotion dur="7s" repeatCount="indefinite" path="M3.634 49.029A29 8-12 1 1 60.366 36.971A29 8-12 1 1 3.634 49.029"/>
+            </g>
+            <path class="im-fill" d="M8 56 32 8 56 56H44.6L32 30.8 19.4 56Z" fill="url(#e-peak)" mask="url(#e-gap)"/>
+            <path class="im-line" pathLength="1" d="M8 56 32 8 56 56H44.6L32 30.8 19.4 56Z" fill="none" stroke="#BDF1FF" stroke-width=".9" stroke-linejoin="round"/>
+            <path class="im-of" pathLength="1" d="M3.634 49.029A29 8-12 0 0 60.366 36.971" fill="none" stroke="url(#e-orbit)" stroke-width="3.2" stroke-linecap="round"/>
+            <g class="im-sat" clip-path="url(#e-front)">
+                <g>
+                    <circle r="6.5" fill="url(#e-glow)"/><circle r="3.1" fill="#FFE7A3"/>
+                    <animateMotion dur="7s" repeatCount="indefinite" path="M3.634 49.029A29 8-12 1 1 60.366 36.971A29 8-12 1 1 3.634 49.029"/>
+                </g>
+            </g>
+        </svg>
+        <svg class="intro__word" viewBox="-1 -1 130 59" overflow="visible">
+            <g fill="#F3F6FF">
+                <path class="iw-l" style="--i:0" d="M0 40 20 0 40 40H30.5L20 19 9.5 40Z"/>
+                <path class="iw-l" style="--i:1" d="M46 0H82V7.5L58.4 32.5H82V40H46V32.5L69.6 7.5H46Z"/>
+                <path class="iw-l" style="--i:2" d="M88 40 108 0 128 40H118.5L108 19 97.5 40Z"/>
+            </g>
+            <g fill="#FFC24A">
+                <circle class="iw-dot" style="--i:0" cx="20" cy="31.5" r="3.3"/>
+                <circle class="iw-dot" style="--i:1" cx="108" cy="31.5" r="3.3"/>
+            </g>
+            <g fill="none" stroke="#AEBBEA" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 49) scale(0.749)">
+                <path class="ln" pathLength="1" style="--i:0" transform="translate(0 0)" d="M0 0H3.5A5 5 0 0 1 3.5 10H0Z"/>
+                <path class="ln" pathLength="1" style="--i:1" transform="translate(12.5 0)" d="M0 0V10"/>
+                <path class="ln" pathLength="1" style="--i:2" transform="translate(16.5 0)" d="M8.536 1.464A5 5 0 1 0 10 5H5.6"/>
+                <path class="ln" pathLength="1" style="--i:3" transform="translate(30.5 0)" d="M0 0V10"/>
+                <path class="ln" pathLength="1" style="--i:4" transform="translate(34.5 0)" d="M0 0H7M3.5 0V10"/>
+                <path class="ln" pathLength="1" style="--i:5" transform="translate(45.5 0)" d="M0 10 3.5 0 7 10M1.6 6.4H5.4"/>
+                <path class="ln" pathLength="1" style="--i:6" transform="translate(56.5 0)" d="M0 0V10H6"/>
+                <path class="ln" pathLength="1" style="--i:7" transform="translate(71.5 0)" d="M6 0H0V10H6M0 5H5"/>
+                <path class="ln" pathLength="1" style="--i:8" transform="translate(81.5 0)" d="M8.536 1.464A5 5 0 1 0 8.536 8.536"/>
+                <path class="ln" pathLength="1" style="--i:9" transform="translate(94.1 0)" d="M10 5A5 5 0 1 1 0 5 5 5 0 1 1 10 5"/>
+                <path class="ln" pathLength="1" style="--i:10" transform="translate(108.1 0)" d="M6.6 1.6C5.9.5 4.8 0 3.5 0 1.7 0 .4 1 .4 2.6c0 1.7 1.4 2.2 3.1 2.5 1.8.3 3.3.9 3.3 2.5C6.8 9.1 5.4 10 3.5 10 2 10 .8 9.4.1 8.3"/>
+                <path class="ln" pathLength="1" style="--i:11" transform="translate(119 0)" d="M0 0 3.5 5 7 0M3.5 5V10"/>
+                <path class="ln" pathLength="1" style="--i:12" transform="translate(130 0)" d="M6.6 1.6C5.9.5 4.8 0 3.5 0 1.7 0 .4 1 .4 2.6c0 1.7 1.4 2.2 3.1 2.5 1.8.3 3.3.9 3.3 2.5C6.8 9.1 5.4 10 3.5 10 2 10 .8 9.4.1 8.3"/>
+                <path class="ln" pathLength="1" style="--i:13" transform="translate(140.9 0)" d="M0 0H7M3.5 0V10"/>
+                <path class="ln" pathLength="1" style="--i:14" transform="translate(151.9 0)" d="M6 0H0V10H6M0 5H5"/>
+                <path class="ln" pathLength="1" style="--i:15" transform="translate(161.9 0)" d="M0 10V0L4.5 6.5 9 0V10"/>
+            </g>
+        </svg>
+        <div class="intro__bar"><i id="introBar"></i></div>
+    </div>
+</div>
 
-                <div class="projects">
-                    <article class="project reveal">
-                        <div class="project__visual project__visual--1">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20M6 15h4"/></svg>
-                            <span class="project__badge">Финтех</span>
-                        </div>
-                        <div class="project__body">
-                            <h3 class="project__title">AZA Pay</h3>
-                            <p class="project__text">Платформа цифровых платежей и переводов.</p>
-                            <button class="btn btn--ghost btn--small" data-project="aza-pay">Подробнее</button>
-                        </div>
-                    </article>
+<!-- ============ ФОН: звёздное небо ============ -->
+<div class="sky" aria-hidden="true"><canvas id="sky"></canvas></div>
 
-                    <article class="project reveal">
-                        <div class="project__visual project__visual--2">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2 3h3l2.6 12h11L22 7H6"/></svg>
-                            <span class="project__badge">E-commerce</span>
-                        </div>
-                        <div class="project__body">
-                            <h3 class="project__title">AZA Market</h3>
-                            <p class="project__text">Маркетплейс локальных брендов и товаров.</p>
-                            <button class="btn btn--ghost btn--small" data-project="aza-market">Подробнее</button>
-                        </div>
-                    </article>
+<!-- ============ ШАПКА ============ -->
+<header class="header" id="header">
+    <div class="container header__inner">
+        <a href="#top" class="brand" aria-label="AZA DIGITAL ECOSYSTEM — на главную">
+            <svg class="brand__mark" viewBox="0 0 64 64" overflow="visible"><use href="#emblem"/></svg>
+            <svg class="brand__word" viewBox="0 0 128 40"><use href="#wordmark"/></svg>
+        </a>
+        <nav class="nav" aria-label="Основная навигация">
+            <a href="#projects" class="nav__link">Проекты</a>
+            <a href="#ecosystem" class="nav__link">Экосистема</a>
+            <a href="#founder" class="nav__link">Основатель</a>
+            <a href="#contact" class="nav__link">Контакты</a>
+        </nav>
+        <a class="btn btn--gold btn--sm header__cta" href="https://wa.me/996507668866" target="_blank" rel="noopener" data-wa="Здравствуйте, Азамат! Пишу с сайта AZA DIGITAL ECOSYSTEM.">
+            <svg class="ico"><use href="#i-wa"/></svg><span>WhatsApp</span>
+        </a>
+        <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    </div>
+    <i class="header__progress" id="progress"></i>
+</header>
 
-                    <article class="project reveal">
-                        <div class="project__visual project__visual--3">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h13v9H1zM14 11h4l4 3v3h-8z"/><circle cx="6" cy="19" r="1.8"/><circle cx="17.5" cy="19" r="1.8"/></svg>
-                            <span class="project__badge">Логистика</span>
-                        </div>
-                        <div class="project__body">
-                            <h3 class="project__title">AZA Delivery</h3>
-                            <p class="project__text">Сервис доставки за один час.</p>
-                            <button class="btn btn--ghost btn--small" data-project="aza-delivery">Подробнее</button>
-                        </div>
-                    </article>
+<!-- Мобильное меню -->
+<div class="menu" id="menu" hidden>
+    <nav class="menu__nav" aria-label="Меню">
+        <a href="#projects" style="--i:0">Проекты</a>
+        <a href="#ecosystem" style="--i:1">Экосистема</a>
+        <a href="#founder" style="--i:2">Основатель</a>
+        <a href="#contact" style="--i:3">Контакты</a>
+    </nav>
+    <a class="btn btn--gold menu__cta" href="https://wa.me/996507668866" target="_blank" rel="noopener" data-wa="Здравствуйте, Азамат! Пишу с сайта AZA DIGITAL ECOSYSTEM.">
+        <svg class="ico"><use href="#i-wa"/></svg>Написать в WhatsApp
+    </a>
+    <p class="menu__num">+996 507 66 88 66</p>
+</div>
 
-                    <article class="project reveal">
-                        <div class="project__visual project__visual--4">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10a5 5 0 0 0-9.3-2.4A4.2 4.2 0 0 0 7 15h11a3.5 3.5 0 0 0 0-7z"/></svg>
-                            <span class="project__badge">B2B</span>
-                        </div>
-                        <div class="project__body">
-                            <h3 class="project__title">AZA Cloud</h3>
-                            <p class="project__text">Облачная инфраструктура для бизнеса.</p>
-                            <button class="btn btn--ghost btn--small" data-project="aza-cloud">Подробнее</button>
-                        </div>
-                    </article>
-
-                    <article class="project reveal">
-                        <div class="project__visual project__visual--5">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
-                            <span class="project__badge">EdTech</span>
-                        </div>
-                        <div class="project__body">
-                            <h3 class="project__title">AZA Academy</h3>
-                            <p class="project__text">Платформа цифрового образования.</p>
-                            <button class="btn btn--ghost btn--small" data-project="aza-academy">Подробнее</button>
-                        </div>
-                    </article>
-
-                    <article class="project reveal">
-                        <div class="project__visual project__visual--6">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/><path d="M9 11.5l2 2 4-4.5"/></svg>
-                            <span class="project__badge">GovTech</span>
-                        </div>
-                        <div class="project__body">
-                            <h3 class="project__title">AZA Gov</h3>
-                            <p class="project__text">Госуслуги в цифровом формате.</p>
-                            <button class="btn btn--ghost btn--small" data-project="aza-gov">Подробнее</button>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== ЭКОСИСТЕМА / НАПРАВЛЕНИЯ ===== -->
-        <section class="section" id="ecosystem">
-            <div class="container">
-                <div class="section__head reveal">
-                    <span class="badge badge--outline">Экосистема</span>
-                    <h2 class="section__title">Как устроена экосистема</h2>
-                    <p class="section__text">Каждое направление решает свою задачу, а вместе они создают бесшовный цифровой опыт.</p>
-                </div>
-
-                <div class="grid">
-                    <article class="card reveal">
-                        <div class="card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20M6 15h4"/></svg>
-                        </div>
-                        <h3 class="card__title">Финансы</h3>
-                        <p class="card__text">Платежи, переводы, цифровые карты и финансовая аналитика в одном приложении.</p>
-                    </article>
-
-                    <article class="card reveal">
-                        <div class="card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2 3h3l2.6 12h11L22 7H6"/></svg>
-                        </div>
-                        <h3 class="card__title">Коммерция</h3>
-                        <p class="card__text">Маркетплейс с тысячами товаров и локальных брендов: быстрая доставка и безопасные покупки.</p>
-                    </article>
-
-                    <article class="card reveal">
-                        <div class="card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h13v9H1zM14 11h4l4 3v3h-8z"/><circle cx="6" cy="19" r="1.8"/><circle cx="17.5" cy="19" r="1.8"/></svg>
-                        </div>
-                        <h3 class="card__title">Логистика</h3>
-                        <p class="card__text">Доставка еды, товаров и документов — в течение часа в крупных городах.</p>
-                    </article>
-
-                    <article class="card reveal">
-                        <div class="card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10a5 5 0 0 0-9.3-2.4A4.2 4.2 0 0 0 7 15h11a3.5 3.5 0 0 0 0-7z"/></svg>
-                        </div>
-                        <h3 class="card__title">Облака</h3>
-                        <p class="card__text">Облачная инфраструктура для бизнеса: хранение данных, вычисления и масштабирование.</p>
-                    </article>
-
-                    <article class="card reveal">
-                        <div class="card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
-                        </div>
-                        <h3 class="card__title">Образование</h3>
-                        <p class="card__text">Курсы цифровых профессий, тренажёры и корпоративное обучение.</p>
-                    </article>
-
-                    <article class="card reveal">
-                        <div class="card__icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/><path d="M9 11.5l2 2 4-4.5"/></svg>
-                        </div>
-                        <h3 class="card__title">Госсектор</h3>
-                        <p class="card__text">Цифровые государственные услуги: документы, справки и заявления — онлайн, без очередей.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== ПРЕИМУЩЕСТВА ===== -->
-        <section class="section section--alt" id="advantages">
-            <div class="container">
-                <div class="section__head reveal">
-                    <span class="badge badge--outline">Почему мы</span>
-                    <h2 class="section__title">Преимущества экосистемы</h2>
-                </div>
-
-                <div class="grid grid--4">
-                    <div class="feature reveal">
-                        <div class="feature__num">01</div>
-                        <h3>Безопасность</h3>
-                        <p>Шифрование данных, двухфакторная аутентификация и соответствие международным стандартам.</p>
-                    </div>
-                    <div class="feature reveal">
-                        <div class="feature__num">02</div>
-                        <h3>Единый аккаунт</h3>
-                        <p>Один логин для всех продуктов экосистемы — без повторных регистраций и паролей.</p>
-                    </div>
-                    <div class="feature reveal">
-                        <div class="feature__num">03</div>
-                        <h3>Скорость</h3>
-                        <p>Современная инфраструктура: страницы и операции выполняются мгновенно.</p>
-                    </div>
-                    <div class="feature reveal">
-                        <div class="feature__num">04</div>
-                        <h3>Поддержка 24/7</h3>
-                        <p>Команда поддержки на русском, казахском и английском языках — в любое время суток.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== О НАС ===== -->
-        <section class="section" id="about">
-            <div class="container about">
-                <div class="about__text reveal">
-                    <span class="badge badge--outline">О нас</span>
-                    <h2 class="section__title">Миссия AZA</h2>
-                    <p>
-                        Мы создаём цифровую среду, в которой жизнь человека и работа
-                        бизнеса становятся проще. AZA Digital Ecosystem объединяет
-                        сервисы повседневного спроса в одной платформе и открывает
-                        новые возможности для партнёров и разработчиков.
-                    </p>
-                    <ul class="about__list">
-                        <li>Инновации — основа каждого продукта</li>
-                        <li>Ориентация на пользователя</li>
-                        <li>Открытость к партнёрству и интеграциям</li>
-                    </ul>
-                    <a href="#contact" class="btn">Сотрудничать с нами</a>
-                </div>
-                <div class="about__visual reveal" aria-hidden="true">
-                    <div class="orbit">
-                        <div class="orbit__core">AZA</div>
-                        <div class="orbit__ring orbit__ring--1"><span>Pay</span><span>Cloud</span></div>
-                        <div class="orbit__ring orbit__ring--2"><span>Market</span><span>Academy</span><span>Delivery</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===== КОНТАКТЫ ===== -->
-        <section class="section section--alt" id="contact">
-            <div class="container">
-                <div class="section__head reveal">
-                    <span class="badge badge--outline">Контакты</span>
-                    <h2 class="section__title">Свяжитесь с нами</h2>
-                    <p class="section__text">Расскажите о задаче — мы предложим решение в течение рабочего дня.</p>
-                </div>
-
-                <div class="contact">
-                    <form class="form reveal" id="contactForm" novalidate>
-                        <div class="form__row">
-                            <div class="form__field">
-                                <label for="name">Имя</label>
-                                <input type="text" id="name" name="name" placeholder="Ваше имя" required>
-                            </div>
-                            <div class="form__field">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                            </div>
-                        </div>
-                        <div class="form__field">
-                            <label for="message">Сообщение</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Чем мы можем помочь?" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn--full">Отправить сообщение</button>
-                        <p class="form__status" id="formStatus" role="status"></p>
-                    </form>
-
-                    <div class="contact__info reveal">
-                        <div class="contact__item">
-                            <h4>Email</h4>
-                            <p>hello@aza-digital.kz</p>
-                        </div>
-                        <div class="contact__item">
-                            <h4>Телефон</h4>
-                            <p>+7 (700) 000-00-00</p>
-                        </div>
-                        <div class="contact__item">
-                            <h4>Офис</h4>
-                            <p>г. Алматы, проспект Достык, 0</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- ===== ПОДВАЛ ===== -->
-    <footer class="footer">
-        <div class="container footer__inner">
-            <div class="footer__brand">
-                <span class="logo__text">AZA<em>digital</em></span>
-                <p>Цифровая экосистема для жизни и бизнеса.</p>
-            </div>
-            <nav class="footer__nav" aria-label="Навигация в подвале">
-                <a href="#projects">Проекты</a>
-                <a href="#ecosystem">Экосистема</a>
-                <a href="#advantages">Преимущества</a>
-                <a href="#about">О нас</a>
-                <a href="#contact">Контакты</a>
-            </nav>
-            <div class="footer__social">
-                <!-- Замените ссылки на реальные соцсети -->
-                <a href="#" aria-label="LinkedIn">in</a>
-                <a href="#" aria-label="Instagram">ig</a>
-                <a href="#" aria-label="X (Twitter)">x</a>
+<main>
+    <!-- ============ ГЛАВНЫЙ ЭКРАН ============ -->
+    <section class="hero" id="top">
+        <canvas class="hero__terrain" id="terrain" aria-hidden="true"></canvas>
+        <div class="hero__fade" aria-hidden="true"></div>
+        <div class="container hero__inner">
+            <h1 class="hero__title" aria-label="AZA DIGITAL ECOSYSTEM">
+                <span class="hl" aria-hidden="true"><span class="hl__in" style="--row:0%;--i:0">AZA</span></span>
+                <span class="hl" aria-hidden="true"><span class="hl__in" style="--row:50%;--i:1">DIGITAL</span></span>
+                <span class="hl" aria-hidden="true"><span class="hl__in" style="--row:100%;--i:2">ECOSYSTEM</span></span>
+            </h1>
+            <p class="hero__lead">Экосистема цифровых продуктов для бизнеса и клиентов: управление банями, интернет-магазин, мессенджер и кабинет для 12+ видов бизнеса.</p>
+            <div class="hero__actions">
+                <a href="#projects" class="btn btn--gold btn--lg" data-magnetic>Смотреть проекты</a>
+                <a href="https://wa.me/996507668866" class="btn btn--glass btn--lg" target="_blank" rel="noopener" data-wa="Здравствуйте, Азамат! Пишу с сайта AZA DIGITAL ECOSYSTEM." data-magnetic>
+                    <svg class="ico"><use href="#i-wa"/></svg>Написать в WhatsApp
+                </a>
             </div>
         </div>
-        <div class="footer__bottom">
-            <p>&copy; <span id="year"></span> AZA Digital Ecosystem. Все права защищены.</p>
-        </div>
-    </footer>
+    </section>
 
-    <!-- ===== МОДАЛЬНОЕ ОКНО ПРОЕКТА ===== -->
-    <div class="modal" id="projectModal" aria-hidden="true">
-        <div class="modal__overlay" data-modal-close></div>
-        <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-            <button class="modal__close" data-modal-close aria-label="Закрыть">&times;</button>
-            <span class="badge badge--outline" id="modalCategory"></span>
-            <h3 class="modal__title" id="modalTitle"></h3>
-            <p class="modal__text" id="modalDescription"></p>
-            <div class="modal__block">
-                <h4>Технологии</h4>
-                <div class="modal__tags" id="modalTech"></div>
+    <!-- ============ БЕГУЩИЕ ЛЕНТЫ ============ -->
+    <div class="bands" aria-hidden="true">
+        <div class="band band--gold">
+            <div class="band__track">
+                <span>PAR ORDO PRO</span><svg><use href="#i-spark"/></svg><span>PAR ORDO GO</span><svg><use href="#i-spark"/></svg><span>MOI MARKET PRO</span><svg><use href="#i-spark"/></svg><span>AZA CONNECT</span><svg><use href="#i-spark"/></svg><span>AZA BUSINESS PRO</span><svg><use href="#i-spark"/></svg>
+                <span>PAR ORDO PRO</span><svg><use href="#i-spark"/></svg><span>PAR ORDO GO</span><svg><use href="#i-spark"/></svg><span>MOI MARKET PRO</span><svg><use href="#i-spark"/></svg><span>AZA CONNECT</span><svg><use href="#i-spark"/></svg><span>AZA BUSINESS PRO</span><svg><use href="#i-spark"/></svg>
             </div>
-            <div class="modal__block">
-                <h4>Результаты</h4>
-                <ul class="modal__results" id="modalResults"></ul>
+        </div>
+        <div class="band band--line">
+            <div class="band__track band__track--rev">
+                <span>Управление баней</span><svg><use href="#i-spark"/></svg><span>Приложение для клиентов</span><svg><use href="#i-spark"/></svg><span>Интернет-магазин</span><svg><use href="#i-spark"/></svg><span>Мессенджер</span><svg><use href="#i-spark"/></svg><span>12+ видов бизнеса</span><svg><use href="#i-spark"/></svg>
+                <span>Управление баней</span><svg><use href="#i-spark"/></svg><span>Приложение для клиентов</span><svg><use href="#i-spark"/></svg><span>Интернет-магазин</span><svg><use href="#i-spark"/></svg><span>Мессенджер</span><svg><use href="#i-spark"/></svg><span>12+ видов бизнеса</span><svg><use href="#i-spark"/></svg>
             </div>
         </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <!-- ============ ПРОЕКТЫ ============ -->
+    <section class="section projects-sec" id="projects">
+        <div class="container">
+            <div class="sec-head">
+                <h2 class="h2 rv">Проекты AZA DIGITAL ECOSYSTEM</h2>
+                <p class="sec-lead rv" style="--d:1">Каждый экран ниже — живая демонстрация: так продукт выглядит и так он работает. «Подробнее» — WhatsApp основателя.</p>
+            </div>
+
+            <div class="projects">
+
+                <!-- 1. PAR ORDO PRO -->
+                <article class="project project--wide rv" style="--tone:255,128,72" data-key="parordo-pro" data-icon="i-steam">
+                    <div class="project__stage" aria-hidden="true">
+                        <div class="demo" data-steps="5" data-ms="1700,1900,1700,2100,2400">
+                            <div class="win">
+                                <div class="win__bar"><span class="win__dots"><i></i><i></i><i></i></span><span class="win__title">PAR ORDO PRO · Баня «Арча»</span><span class="win__chip">Сегодня</span></div>
+                                <div class="win__body">
+                                    <aside class="ui-side">
+                                        <i class="ui-side__logo"></i>
+                                        <svg class="is-active"><use href="#i-calendar"/></svg>
+                                        <svg><use href="#i-home"/></svg>
+                                        <svg><use href="#i-users"/></svg>
+                                        <svg><use href="#i-wallet"/></svg>
+                                        <svg><use href="#i-sliders"/></svg>
+                                    </aside>
+                                    <div class="ui-main">
+                                        <div class="ui-head">
+                                            <div><p class="ui-h">Залы и брони</p><p class="ui-sub">Сегодня, 18:40</p></div>
+                                            <span class="ui-btn ui-btn--tone">+ Бронь</span>
+                                        </div>
+                                        <div class="ui-kpis">
+                                            <div class="ui-kpi"><span>Выручка</span><b data-vals="48500,48500,48500,56500,56500" data-fmt="som">48 500 с</b></div>
+                                            <div class="ui-kpi"><span>Гости</span><b data-vals="36,36,42,42,42">36</b></div>
+                                            <div class="ui-kpi"><span>Загрузка</span><b data-vals="82,82,82,88,88" data-fmt="pct">82%</b><i class="ui-meter"><i data-w="82,82,82,88,88"></i></i></div>
+                                        </div>
+                                        <div class="pp-board">
+                                            <div class="pp-times"><span style="--t:0">14:00</span><span style="--t:2">16:00</span><span style="--t:4">18:00</span><span style="--t:6">20:00</span><span style="--t:8">22:00</span></div>
+                                            <div class="pp-row"><span class="pp-room">Сауна №1</span><div class="pp-lane"><i class="pp-b" style="--s:0;--e:2">Бакыт · 4</i><i class="pp-b" style="--s:4.5;--e:6.5">Эрлан · 5</i></div></div>
+                                            <div class="pp-row"><span class="pp-room">Сауна №2</span><div class="pp-lane"><i class="pp-b" style="--s:1;--e:3.5">Мирлан · 3</i></div></div>
+                                            <div class="pp-row"><span class="pp-room">Хаммам</span><div class="pp-lane"><i class="pp-b" style="--s:2;--e:5">Айжан · 2</i></div></div>
+                                            <div class="pp-row"><span class="pp-room">VIP-зал</span><div class="pp-lane"><i class="pp-b" style="--s:.5;--e:3">Нурбек · 8</i><i class="pp-b pp-b--new" style="--s:5;--e:7"><svg><use href="#i-check"/></svg>Айбек · 6</i></div></div>
+                                            <div class="pp-nowwrap"><i class="pp-now" style="--t:4.67"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui-toast" data-on="1 2"><i class="ui-toast__dot"></i><span><b>Новая бронь</b>VIP-зал · 19:00–21:00</span></div>
+                                <div class="ui-toast ui-toast--ok" data-on="3 4"><svg><use href="#i-check"/></svg><span><b>Оплата получена</b>8 000 с · VIP-зал</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__info">
+                        <span class="tag">Для владельцев бань</span>
+                        <h3 class="project__name">PAR ORDO PRO</h3>
+                        <p class="project__kind">Управление баней</p>
+                        <p class="project__text">Залы, брони, оплаты и выручка в одном окне. Администратор видит загрузку на весь день.</p>
+                        <button class="btn btn--line" type="button" data-more>Подробнее</button>
+                    </div>
+                </article>
+
+                <!-- 2. PAR ORDO GO -->
+                <article class="project project--tall rv" style="--tone:255,160,82;--d:1" data-key="parordo-go" data-icon="i-phone">
+                    <div class="project__stage" aria-hidden="true">
+                        <div class="demo" data-steps="6" data-ms="1500,1200,1600,1400,1300,2800">
+                            <div class="phone"><div class="phone__screen">
+                                <div class="ui-status"><b>18:40</b><i class="ui-island"></i><span class="ui-sig"><i></i><i></i><i></i><em></em></span></div>
+                                <div class="go-track">
+                                    <div class="go-screen">
+                                        <div class="go-top"><span class="go-brand"><i></i>PAR ORDO GO</span><i class="ui-ava">А</i></div>
+                                        <p class="ui-sub">Салам, Айгерим!</p>
+                                        <p class="ui-h ui-h--lg">Куда пойдём сегодня?</p>
+                                        <div class="ui-search"><svg><use href="#i-search"/></svg>Баня, сауна, хаммам</div>
+                                        <div class="ui-chips"><span class="is-active">Все</span><span>Сауна</span><span>Хаммам</span><span>VIP</span></div>
+                                        <div class="go-card go-card--a">
+                                            <div class="go-pic go-pic--1"><i class="steam"></i><i class="steam"></i><i class="steam"></i><span class="go-rate"><svg><use href="#i-star"/></svg>4.9</span></div>
+                                            <div class="go-info"><b>Баня «Арча»</b><span>2,4 км · от 1 200 с/час</span></div>
+                                        </div>
+                                        <div class="go-card">
+                                            <div class="go-pic go-pic--2"><i class="steam"></i><i class="steam"></i><span class="go-rate"><svg><use href="#i-star"/></svg>4.8</span></div>
+                                            <div class="go-info"><b>Хаммам «Ордо»</b><span>3,1 км · от 1 500 с/час</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="go-screen go-detail">
+                                        <div class="go-hero go-pic--1"><span class="go-back"><svg><use href="#i-back"/></svg></span><i class="steam"></i><i class="steam"></i><i class="steam"></i></div>
+                                        <div class="go-body">
+                                            <p class="ui-h">Баня «Арча»</p>
+                                            <p class="ui-sub"><svg class="go-star"><use href="#i-star"/></svg>4.9 · 2,4 км</p>
+                                            <p class="go-label">Время</p>
+                                            <div class="go-slots"><span>14:00</span><span>16:00</span><span class="go-pick">18:00</span><span class="is-busy">20:00</span></div>
+                                            <p class="go-label">Гости</p>
+                                            <div class="go-guests"><i>−</i><b>4</b><i>+</i></div>
+                                            <div class="go-total"><span>2 часа</span><b>2 400 с</b></div>
+                                            <span class="ui-btn ui-btn--tone ui-btn--block go-cta">Забронировать</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui-sheet">
+                                    <span class="ui-okmark"><svg><use href="#i-check"/></svg></span>
+                                    <b>Бронь подтверждена</b>
+                                    <span>Баня «Арча» · 18:00 · 4 гостя</span>
+                                </div>
+                                <i class="tap" data-tap="1:.go-card--a;3:.go-pick;4:.go-cta"></i>
+                            </div></div>
+                        </div>
+                    </div>
+                    <div class="project__info">
+                        <span class="tag">Для гостей</span>
+                        <h3 class="project__name">PAR ORDO GO</h3>
+                        <p class="project__kind">Приложение для клиентов</p>
+                        <p class="project__text">Гость находит баню, выбирает время и бронирует за минуту — прямо с телефона.</p>
+                        <button class="btn btn--line" type="button" data-more>Подробнее</button>
+                    </div>
+                </article>
+
+                <!-- 3. MOI MARKET PRO — Интернет-магазин -->
+                <article class="project project--tall rv" style="--tone:255,196,77" data-key="moi-store" data-icon="i-cart">
+                    <div class="project__stage" aria-hidden="true">
+                        <div class="demo" data-steps="6" data-ms="1400,1600,1600,1500,1300,2800">
+                            <div class="phone"><div class="phone__screen">
+                                <div class="ui-status"><b>18:40</b><i class="ui-island"></i><span class="ui-sig"><i></i><i></i><i></i><em></em></span></div>
+                                <div class="ms-top"><span class="ms-brand">MOI MARKET</span><span class="ms-cart"><svg><use href="#i-cart"/></svg><em data-texts="0|1|2|2|2|2">0</em></span></div>
+                                <div class="ui-search"><svg><use href="#i-search"/></svg>Поиск товаров</div>
+                                <div class="ui-chips"><span class="is-active">Все</span><span>Одежда</span><span>Техника</span><span>Дом</span></div>
+                                <div class="ms-grid">
+                                    <div class="ms-item"><div class="ms-pic ms-pic--1"><svg><use href="#i-sneaker"/></svg></div><b>Кроссовки</b><span>3 200 с</span><i class="ms-add"><svg><use href="#i-plus"/></svg></i></div>
+                                    <div class="ms-item"><div class="ms-pic ms-pic--2"><svg><use href="#i-headphones"/></svg></div><b>Наушники</b><span>2 450 с</span><i class="ms-add"><svg><use href="#i-plus"/></svg></i></div>
+                                    <div class="ms-item"><div class="ms-pic ms-pic--3"><svg><use href="#i-backpack"/></svg></div><b>Рюкзак</b><span>1 800 с</span><i class="ms-add"><svg><use href="#i-plus"/></svg></i></div>
+                                    <div class="ms-item"><div class="ms-pic ms-pic--4"><svg><use href="#i-watch"/></svg></div><b>Часы</b><span>5 900 с</span><i class="ms-add"><svg><use href="#i-plus"/></svg></i></div>
+                                </div>
+                                <div class="ms-bar"><span><b>2 товара</b>5 650 с</span><span class="ui-btn ui-btn--tone">Оформить</span></div>
+                                <div class="ui-sheet">
+                                    <span class="ui-okmark"><svg><use href="#i-check"/></svg></span>
+                                    <b>Заказ оформлен</b>
+                                    <span>№1024 · 5 650 с</span>
+                                </div>
+                                <i class="ms-fly" data-fly="1:.ms-item:nth-child(2) .ms-add=>.ms-cart"></i>
+                                <i class="ms-fly" data-fly="2:.ms-item:nth-child(1) .ms-add=>.ms-cart"></i>
+                                <i class="tap" data-tap="1:.ms-item:nth-child(2) .ms-add;2:.ms-item:nth-child(1) .ms-add;4:.ms-bar .ui-btn"></i>
+                            </div></div>
+                        </div>
+                    </div>
+                    <div class="project__info">
+                        <span class="tag tag--soon">Скоро</span>
+                        <h3 class="project__name">MOI MARKET PRO</h3>
+                        <p class="project__kind">Интернет-магазин</p>
+                        <p class="project__text">Витрина, корзина и оформление заказа: покупатель находит товар и заказывает в пару касаний.</p>
+                        <button class="btn btn--line" type="button" data-more>Подробнее</button>
+                    </div>
+                </article>
+
+                <!-- 4. MOI MARKET PRO — Система управления -->
+                <article class="project project--wide rv" style="--tone:255,206,96;--d:1" data-key="moi-pro" data-icon="i-chart">
+                    <div class="project__stage" aria-hidden="true">
+                        <div class="demo" data-steps="5" data-ms="1600,1800,1800,1700,2400">
+                            <div class="win">
+                                <div class="win__bar"><span class="win__dots"><i></i><i></i><i></i></span><span class="win__title">MOI MARKET PRO · Панель продавца</span><span class="win__chip">Онлайн</span></div>
+                                <div class="win__body">
+                                    <aside class="ui-side">
+                                        <i class="ui-side__logo"></i>
+                                        <svg class="is-active"><use href="#i-chart"/></svg>
+                                        <svg><use href="#i-cart"/></svg>
+                                        <svg><use href="#i-box"/></svg>
+                                        <svg><use href="#i-users"/></svg>
+                                        <svg><use href="#i-sliders"/></svg>
+                                    </aside>
+                                    <div class="ui-main">
+                                        <div class="ui-head">
+                                            <div><p class="ui-h">Продажи</p><p class="ui-sub">Сегодня · обновлено только что</p></div>
+                                            <span class="ui-seg"><i class="is-active">День</i><i>Неделя</i><i>Месяц</i></span>
+                                        </div>
+                                        <div class="ui-kpis">
+                                            <div class="ui-kpi"><span>Выручка</span><b data-vals="124300,124300,129950,129950,129950" data-fmt="som">124 300 с</b></div>
+                                            <div class="ui-kpi"><span>Заказы</span><b data-vals="86,86,87,87,87">86</b></div>
+                                            <div class="ui-kpi"><span>Средний чек</span><b data-vals="1445,1445,1494,1494,1494" data-fmt="som">1 445 с</b></div>
+                                        </div>
+                                        <div class="mp-grid">
+                                            <div class="mp-chart">
+                                                <svg viewBox="0 0 200 80" preserveAspectRatio="none">
+                                                    <defs><linearGradient id="mpArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgb(255,206,96)" stop-opacity=".35"/><stop offset="1" stop-color="rgb(255,206,96)" stop-opacity="0"/></linearGradient></defs>
+                                                    <path class="mp-area" d="M0 64 20 57 40 60 60 46 80 49 100 38 120 41 140 30 160 33 180 24V80H0Z" fill="url(#mpArea)"/>
+                                                    <path class="mp-line" d="M0 64 20 57 40 60 60 46 80 49 100 38 120 41 140 30 160 33 180 24" fill="none" vector-effect="non-scaling-stroke"/>
+                                                    <path class="mp-new" d="M180 24 200 12" fill="none" vector-effect="non-scaling-stroke"/>
+                                                </svg>
+                                                <i class="mp-dot" data-from="2"></i>
+                                                <span class="mp-tip" data-from="2">+5 650 с</span>
+                                            </div>
+                                            <div class="mp-orders">
+                                                <p class="ui-cap">Заказы</p>
+                                                <div class="mp-order mp-order--new" data-from="1"><div class="mp-order__in"><b>№1024</b><span>Айгерим</span><em>5 650 с</em><i class="st" data-texts="Новый|Новый|Новый|Собран|Отправлен">Новый</i></div></div>
+                                                <div class="mp-order"><div class="mp-order__in"><b>№1023</b><span>Айжан</span><em>3 200 с</em><i class="st st--sent">Отправлен</i></div></div>
+                                                <div class="mp-order"><div class="mp-order__in"><b>№1022</b><span>Нурбек</span><em>1 800 с</em><i class="st st--done">Доставлен</i></div></div>
+                                            </div>
+                                        </div>
+                                        <div class="mp-stock">
+                                            <p class="ui-cap">Склад</p>
+                                            <div class="mp-sku"><span>Наушники</span><i class="ui-meter"><i data-w="72,72,68,68,68"></i></i><b data-vals="18,18,17,17,17">18</b></div>
+                                            <div class="mp-sku"><span>Кроссовки</span><i class="ui-meter"><i data-w="45,45,40,40,40"></i></i><b data-vals="9,9,8,8,8">9</b></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__info">
+                        <span class="tag tag--soon">Скоро</span>
+                        <h3 class="project__name">MOI MARKET PRO</h3>
+                        <p class="project__kind">Система управления</p>
+                        <p class="project__text">Заказы, склад и продажи магазина в реальном времени — для владельца и команды.</p>
+                        <button class="btn btn--line" type="button" data-more>Подробнее</button>
+                    </div>
+                </article>
+
+                <!-- 5. AZA CONNECT -->
+                <article class="project project--tall rv" style="--tone:114,228,255" data-key="aza-connect" data-icon="i-chat">
+                    <div class="project__stage" aria-hidden="true">
+                        <div class="demo" data-steps="8" data-ms="1400,1300,1000,1500,1300,1000,1800,2600">
+                            <div class="phone"><div class="phone__screen">
+                                <div class="ui-status"><b>18:40</b><i class="ui-island"></i><span class="ui-sig"><i></i><i></i><i></i><em></em></span></div>
+                                <div class="ch-top">
+                                    <svg class="ch-back"><use href="#i-back"/></svg>
+                                    <i class="ui-ava ui-ava--tone">PO</i>
+                                    <div class="ch-who"><b>Баня «Арча»</b><span>в сети</span></div>
+                                    <svg class="ch-more"><use href="#i-dots"/></svg>
+                                </div>
+                                <div class="ch-body">
+                                    <span class="ch-date">Вчера</span>
+                                    <div class="ch-row ch-row--in is-on"><div class="ch-row__in"><p class="ch-msg">Спасибо за визит! Будем рады видеть вас снова.<em>21:05</em></p></div></div>
+                                    <div class="ch-row ch-row--out is-on"><div class="ch-row__in"><p class="ch-msg">Рахмат, всё было отлично!<em>21:07<i class="tick is-on"><svg><use href="#i-check"/></svg><svg><use href="#i-check"/></svg></i></em></p></div></div>
+                                    <span class="ch-date">Сегодня</span>
+                                    <div class="ch-row ch-row--out" data-from="1"><div class="ch-row__in"><p class="ch-msg">Салам! VIP-зал на 19:00 свободен?<em>18:32<i class="tick" data-from="3"><svg><use href="#i-check"/></svg><svg><use href="#i-check"/></svg></i></em></p></div></div>
+                                    <div class="ch-row ch-row--in" data-on="2"><div class="ch-row__in"><p class="ch-msg ch-typing"><i></i><i></i><i></i></p></div></div>
+                                    <div class="ch-row ch-row--in" data-from="3"><div class="ch-row__in"><p class="ch-msg">Салам! Да, свободен. Бронируем на 2 часа?<em>18:33</em></p></div></div>
+                                    <div class="ch-row ch-row--out" data-from="4"><div class="ch-row__in"><p class="ch-msg">Да, нас будет шестеро<em>18:33<i class="tick" data-from="6"><svg><use href="#i-check"/></svg><svg><use href="#i-check"/></svg></i></em></p></div></div>
+                                    <div class="ch-row ch-row--in" data-on="5"><div class="ch-row__in"><p class="ch-msg ch-typing"><i></i><i></i><i></i></p></div></div>
+                                    <div class="ch-row ch-row--in" data-from="6"><div class="ch-row__in"><div class="ch-card"><span class="ui-okmark"><svg><use href="#i-check"/></svg></span><div><b>Бронь подтверждена</b><span>VIP-зал · 19:00–21:00 · 6 гостей</span></div></div></div></div>
+                                    <div class="ch-row ch-row--out" data-from="7"><div class="ch-row__in"><p class="ch-msg">Рахмат! До встречи<em>18:34<i class="tick"><svg><use href="#i-check"/></svg><svg><use href="#i-check"/></svg></i></em></p></div></div>
+                                </div>
+                                <div class="ch-input"><span>Сообщение</span><i class="ch-send"><svg><use href="#i-send"/></svg></i></div>
+                            </div></div>
+                        </div>
+                    </div>
+                    <div class="project__info">
+                        <span class="tag">Мессенджер</span>
+                        <h3 class="project__name">AZA CONNECT</h3>
+                        <p class="project__kind">Мессенджер от AZA DIGITAL ECOSYSTEM</p>
+                        <p class="project__text">Переписка клиентов и бизнеса: вопросы, брони и подтверждения — в одном чате.</p>
+                        <button class="btn btn--line" type="button" data-more>Подробнее</button>
+                    </div>
+                </article>
+
+                <!-- 6. AZA BUSINESS PRO -->
+                <article class="project project--wide rv" style="--tone:150,140,255;--d:1" data-key="aza-business" data-icon="i-briefcase">
+                    <div class="project__stage" aria-hidden="true">
+                        <div class="demo" data-steps="4" data-ms="2300,2300,2300,2300" data-cycle>
+                            <div class="win">
+                                <div class="win__bar"><span class="win__dots"><i></i><i></i><i></i></span><span class="win__title">AZA BUSINESS PRO</span><span class="win__chip">12+ видов бизнеса</span></div>
+                                <div class="win__body bz">
+                                    <div class="bz-left">
+                                        <p class="ui-cap">Мои бизнесы</p>
+                                        <div class="bz-grid">
+                                            <span class="bz-tile" data-on="0"><svg><use href="#i-steam"/></svg><em>Баня</em></span>
+                                            <span class="bz-tile" data-on="1"><svg><use href="#i-store"/></svg><em>Магазин</em></span>
+                                            <span class="bz-tile" data-on="2"><svg><use href="#i-coffee"/></svg><em>Кафе</em></span>
+                                            <span class="bz-tile" data-on="3"><svg><use href="#i-scissors"/></svg><em>Салон</em></span>
+                                            <span class="bz-tile"><svg><use href="#i-car"/></svg><em>Автомойка</em></span>
+                                            <span class="bz-tile"><svg><use href="#i-cross"/></svg><em>Аптека</em></span>
+                                            <span class="bz-tile"><svg><use href="#i-bed"/></svg><em>Отель</em></span>
+                                            <span class="bz-tile"><svg><use href="#i-dumbbell"/></svg><em>Фитнес</em></span>
+                                            <span class="bz-tile"><svg><use href="#i-box"/></svg><em>Склад</em></span>
+                                            <span class="bz-tile"><svg><use href="#i-truck"/></svg><em>Доставка</em></span>
+                                            <span class="bz-tile"><svg><use href="#i-pulse"/></svg><em>Клиника</em></span>
+                                            <span class="bz-tile"><svg><use href="#i-book"/></svg><em>Учёба</em></span>
+                                        </div>
+                                        <span class="bz-add">+ Добавить бизнес</span>
+                                    </div>
+                                    <div class="bz-right">
+                                        <div class="bz-head">
+                                            <span class="bz-ico">
+                                                <svg data-on="0"><use href="#i-steam"/></svg><svg data-on="1"><use href="#i-store"/></svg><svg data-on="2"><use href="#i-coffee"/></svg><svg data-on="3"><use href="#i-scissors"/></svg>
+                                            </span>
+                                            <div><b data-texts="Баня «Арча»|Магазин «Ала-Тоо»|Кафе «Самал»|Салон «Айым»">Баня «Арча»</b><span>Сегодня</span></div>
+                                        </div>
+                                        <div class="ui-kpis">
+                                            <div class="ui-kpi"><span>Выручка</span><b data-vals="56500,129950,38200,21400" data-fmt="som">56 500 с</b></div>
+                                            <div class="ui-kpi"><span>Клиенты</span><b data-vals="42,87,124,18">42</b></div>
+                                            <div class="ui-kpi"><span>Сотрудники</span><b data-vals="6,4,8,5">6</b></div>
+                                        </div>
+                                        <div class="bz-chart">
+                                            <p class="ui-cap">Неделя</p>
+                                            <div class="bz-bars">
+                                                <i data-h="38,55,62,30"></i><i data-h="52,48,70,44"></i><i data-h="45,66,58,52"></i><i data-h="60,72,80,38"></i><i data-h="72,64,74,61"></i><i data-h="95,88,92,70"></i><i data-h="84,96,66,82"></i>
+                                            </div>
+                                            <div class="bz-days"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+                                        </div>
+                                        <div class="bz-foot"><svg><use href="#i-check"/></svg><span data-texts="Отчёт за день готов|Склад обновлён|Смена закрыта|Запись на завтра: 12 клиентов">Отчёт за день готов</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__info">
+                        <span class="tag tag--soon">Скоро</span>
+                        <h3 class="project__name">AZA BUSINESS PRO</h3>
+                        <p class="project__kind">Управление бизнесом · 12+ видов бизнеса</p>
+                        <p class="project__text">Один кабинет для 12+ видов бизнеса: выручка, клиенты, сотрудники и отчёты.</p>
+                        <button class="btn btn--line" type="button" data-more>Подробнее</button>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ЭКОСИСТЕМА ============ -->
+    <section class="section eco" id="ecosystem">
+        <div class="container eco__grid">
+            <div class="eco__text">
+                <h2 class="h2 rv">Одна экосистема</h2>
+                <p class="sec-lead rv" style="--d:1">Четыре направления — одна цифровая среда, в которой работа бизнеса и жизнь людей становятся проще. Бизнес управляет в PRO-версиях, клиенты пользуются приложениями, а общение идёт через AZA CONNECT.</p>
+            </div>
+            <div class="hub rv" style="--d:1">
+                <svg class="hub__svg" viewBox="0 0 100 100" aria-hidden="true">
+                    <circle class="hub__ring" cx="50" cy="50" r="22"/>
+                    <circle class="hub__ring hub__ring--2" cx="50" cy="50" r="36"/>
+                    <circle class="hub__ring hub__ring--3" cx="50" cy="50" r="49"/>
+                    <path class="hub__link" d="M50 50 20 20"/><path class="hub__link" d="M50 50 80 20"/><path class="hub__link" d="M50 50 20 80"/><path class="hub__link" d="M50 50 80 80"/>
+                    <path class="hub__pulse" pathLength="100" d="M50 50 20 20" style="--i:0"/><path class="hub__pulse" pathLength="100" d="M50 50 80 20" style="--i:1"/><path class="hub__pulse" pathLength="100" d="M50 50 20 80" style="--i:2"/><path class="hub__pulse" pathLength="100" d="M50 50 80 80" style="--i:3"/>
+                </svg>
+                <div class="hub__core"><svg viewBox="0 0 64 64" overflow="visible"><use href="#emblem"/></svg></div>
+                <div class="hub__node" style="--x:20%;--y:20%;--tone:255,128,72">
+                    <span class="hub__ico"><svg><use href="#i-steam"/></svg></span>
+                    <b>PAR ORDO</b><span>PRO — для владельцев бань, GO — для гостей</span>
+                </div>
+                <div class="hub__node" style="--x:80%;--y:20%;--tone:255,196,77">
+                    <span class="hub__ico"><svg><use href="#i-cart"/></svg></span>
+                    <b>MOI MARKET PRO</b><span>Интернет-магазин и система управления</span>
+                </div>
+                <div class="hub__node" style="--x:20%;--y:80%;--tone:114,228,255">
+                    <span class="hub__ico"><svg><use href="#i-chat"/></svg></span>
+                    <b>AZA CONNECT</b><span>Мессенджер для клиентов и бизнеса</span>
+                </div>
+                <div class="hub__node" style="--x:80%;--y:80%;--tone:150,140,255">
+                    <span class="hub__ico"><svg><use href="#i-briefcase"/></svg></span>
+                    <b>AZA BUSINESS PRO</b><span>Управление 12+ видами бизнеса</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ОСНОВАТЕЛЬ ============ -->
+    <section class="section founder" id="founder">
+        <div class="container founder__grid">
+            <div class="founder__visual rv" aria-hidden="true">
+                <!-- Чтобы поставить фото: положите файл assets/founder.jpg и замените блок .portrait на
+                     <img class="portrait portrait--photo" src="assets/founder.jpg" alt="Азамат Акматов"> -->
+                <div class="portrait">
+                    <div class="portrait__sun"></div>
+                    <svg class="portrait__ridge" viewBox="0 0 400 140" preserveAspectRatio="none">
+                        <path class="r1" d="M0 140V78L38 52 62 66 104 28 136 54 170 36 204 62 238 22 276 58 312 40 350 64 400 44V140Z"/>
+                        <path class="r2" d="M0 140V100L44 80 80 92 128 64 166 88 214 70 256 94 300 72 344 92 400 76V140Z"/>
+                    </svg>
+                    <div class="portrait__mono">АА</div>
+                    <div class="portrait__ring"></div>
+                    <p class="portrait__cap">Нарын → Бишкек</p>
+                </div>
+            </div>
+            <div class="founder__info">
+                <p class="founder__role rv">Основатель AZA DIGITAL ECOSYSTEM</p>
+                <h2 class="founder__name rv" style="--d:1"><span>Азамат</span> <span>Акматов</span></h2>
+                <dl class="facts rv" style="--d:2">
+                    <div class="fact"><dt>Дата рождения</dt><dd>26 мая 2002</dd></div>
+                    <div class="fact"><dt>Родом из</dt><dd>Нарын, Ат-Башы, Кара-Суу</dd></div>
+                    <div class="fact"><dt>Сейчас</dt><dd>Бишкек</dd></div>
+                </dl>
+                <div class="journey rv" style="--d:3">
+                    <svg class="journey__svg" viewBox="0 0 520 150" aria-hidden="true">
+                        <path class="j-r1" d="M110 132 158 86 182 102 226 56 254 80 292 42 326 76 356 60 412 132Z"/>
+                        <path class="j-r2" d="M84 132 142 102 184 116 236 84 270 104 316 80 366 108 440 132Z"/>
+                        <path class="j-path" id="jPath" d="M40 118C130 -6 390 -6 480 118"/>
+                        <circle class="j-pin" cx="40" cy="118" r="7"/><circle class="j-pin j-pin--now" cx="480" cy="118" r="7"/>
+                        <circle class="j-pulse" cx="480" cy="118" r="7"/>
+                        <g class="j-dot"><circle r="9" fill="url(#e-glow)"/><circle r="4" fill="#FFE7A3"/><animateMotion dur="5.5s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#jPath"/></animateMotion></g>
+                    </svg>
+                    <div class="journey__labels">
+                        <p><b>Кара-Суу</b><span>Ат-Башы, Нарын · 2002</span></p>
+                        <p><b>Бишкек</b><span>сейчас</span></p>
+                    </div>
+                </div>
+                <div class="rv" style="--d:4">
+                    <a class="btn btn--gold btn--lg" href="https://wa.me/996507668866" target="_blank" rel="noopener" data-wa="Здравствуйте, Азамат! Пишу с сайта AZA DIGITAL ECOSYSTEM." data-magnetic>
+                        <svg class="ico"><use href="#i-wa"/></svg>Написать Азамату
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ КОНТАКТЫ ============ -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="sec-head">
+                <h2 class="h2 rv">Связь с основателем</h2>
+                <p class="sec-lead rv" style="--d:1">Партнёрство, демонстрация проектов или вопрос — напишите Азамату в WhatsApp.</p>
+            </div>
+            <div class="contact__grid">
+                <div class="contact__main rv">
+                    <p class="contact__label"><svg class="ico"><use href="#i-wa"/></svg>WhatsApp</p>
+                    <a class="bignum" href="https://wa.me/996507668866" target="_blank" rel="noopener" data-wa="Здравствуйте, Азамат! Пишу с сайта AZA DIGITAL ECOSYSTEM."><span>+996 507</span> <span>66 88 66</span></a>
+                    <div class="contact__actions">
+                        <a class="btn btn--gold btn--lg" href="https://wa.me/996507668866" target="_blank" rel="noopener" data-wa="Здравствуйте, Азамат! Пишу с сайта AZA DIGITAL ECOSYSTEM." data-magnetic><svg class="ico"><use href="#i-wa"/></svg>Написать в WhatsApp</a>
+                        <button class="btn btn--glass btn--lg" type="button" data-copy="+996 507 66 88 66"><svg class="ico"><use href="#i-copy"/></svg>Скопировать номер</button>
+                    </div>
+                    <div class="qr">
+                        <div class="qr__code">
+                            <svg viewBox="-3 -3 35 35" role="img" aria-label="QR-код: чат WhatsApp +996 507 66 88 66"><rect x="-3" y="-3" width="35" height="35" fill="#F5F7FF"/><path fill="#0A1035" d="M0 0h7v1h-7zM8 0h2v1h-2zM12 0h1v1h-1zM14 0h5v1h-5zM22 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM8 1h1v1h-1zM11 1h1v1h-1zM13 1h1v1h-1zM15 1h1v1h-1zM18 1h1v1h-1zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM8 2h1v1h-1zM11 2h1v1h-1zM13 2h1v1h-1zM15 2h1v1h-1zM18 2h2v1h-2zM22 2h1v1h-1zM24 2h3v1h-3zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM8 3h1v1h-1zM10 3h4v1h-4zM15 3h1v1h-1zM18 3h1v1h-1zM22 3h1v1h-1zM24 3h3v1h-3zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM8 4h1v1h-1zM13 4h1v1h-1zM18 4h3v1h-3zM22 4h1v1h-1zM24 4h3v1h-3zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM10 5h1v1h-1zM12 5h3v1h-3zM17 5h1v1h-1zM19 5h2v1h-2zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h7v1h-7zM8 7h6v1h-6zM15 7h5v1h-5zM1 8h2v1h-2zM4 8h1v1h-1zM6 8h2v1h-2zM9 8h2v1h-2zM13 8h2v1h-2zM18 8h1v1h-1zM20 8h1v1h-1zM22 8h1v1h-1zM24 8h5v1h-5zM0 9h2v1h-2zM4 9h1v1h-1zM11 9h4v1h-4zM18 9h2v1h-2zM22 9h2v1h-2zM28 9h1v1h-1zM0 10h1v1h-1zM6 10h1v1h-1zM10 10h1v1h-1zM12 10h1v1h-1zM15 10h1v1h-1zM20 10h1v1h-1zM25 10h4v1h-4zM0 11h2v1h-2zM3 11h2v1h-2zM7 11h3v1h-3zM12 11h2v1h-2zM16 11h3v1h-3zM20 11h3v1h-3zM25 11h1v1h-1zM27 11h1v1h-1zM0 12h1v1h-1zM3 12h4v1h-4zM8 12h3v1h-3zM12 12h1v1h-1zM15 12h1v1h-1zM17 12h1v1h-1zM20 12h1v1h-1zM22 12h2v1h-2zM25 12h1v1h-1zM1 13h2v1h-2zM5 13h1v1h-1zM7 13h3v1h-3zM12 13h1v1h-1zM15 13h1v1h-1zM20 13h4v1h-4zM28 13h1v1h-1zM6 14h1v1h-1zM8 14h1v1h-1zM11 14h2v1h-2zM16 14h2v1h-2zM23 14h1v1h-1zM26 14h1v1h-1zM28 14h1v1h-1zM2 15h1v1h-1zM5 15h1v1h-1zM8 15h4v1h-4zM13 15h1v1h-1zM15 15h2v1h-2zM20 15h2v1h-2zM23 15h1v1h-1zM27 15h2v1h-2zM0 16h2v1h-2zM3 16h1v1h-1zM5 16h3v1h-3zM9 16h1v1h-1zM12 16h3v1h-3zM22 16h2v1h-2zM25 16h1v1h-1zM27 16h2v1h-2zM1 17h3v1h-3zM5 17h1v1h-1zM12 17h4v1h-4zM17 17h1v1h-1zM22 17h2v1h-2zM25 17h1v1h-1zM27 17h2v1h-2zM0 18h1v1h-1zM2 18h7v1h-7zM13 18h1v1h-1zM20 18h2v1h-2zM26 18h3v1h-3zM1 19h1v1h-1zM3 19h1v1h-1zM5 19h1v1h-1zM7 19h1v1h-1zM11 19h1v1h-1zM13 19h1v1h-1zM15 19h1v1h-1zM17 19h2v1h-2zM20 19h1v1h-1zM22 19h1v1h-1zM25 19h1v1h-1zM27 19h2v1h-2zM0 20h1v1h-1zM4 20h1v1h-1zM6 20h2v1h-2zM9 20h1v1h-1zM17 20h2v1h-2zM20 20h6v1h-6zM8 21h2v1h-2zM11 21h1v1h-1zM14 21h1v1h-1zM17 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM28 21h1v1h-1zM0 22h7v1h-7zM8 22h2v1h-2zM11 22h3v1h-3zM18 22h3v1h-3zM22 22h1v1h-1zM24 22h1v1h-1zM26 22h1v1h-1zM28 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM11 23h2v1h-2zM15 23h1v1h-1zM17 23h2v1h-2zM20 23h1v1h-1zM24 23h1v1h-1zM0 24h1v1h-1zM2 24h3v1h-3zM6 24h1v1h-1zM8 24h4v1h-4zM15 24h2v1h-2zM18 24h1v1h-1zM20 24h6v1h-6zM0 25h1v1h-1zM2 25h3v1h-3zM6 25h1v1h-1zM9 25h1v1h-1zM11 25h1v1h-1zM15 25h2v1h-2zM18 25h1v1h-1zM20 25h2v1h-2zM24 25h1v1h-1zM0 26h1v1h-1zM2 26h3v1h-3zM6 26h1v1h-1zM8 26h3v1h-3zM14 26h4v1h-4zM19 26h1v1h-1zM23 26h3v1h-3zM28 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM8 27h2v1h-2zM11 27h2v1h-2zM14 27h1v1h-1zM16 27h3v1h-3zM20 27h4v1h-4zM25 27h1v1h-1zM27 27h1v1h-1zM0 28h7v1h-7zM9 28h1v1h-1zM11 28h1v1h-1zM14 28h2v1h-2zM17 28h2v1h-2zM20 28h1v1h-1zM22 28h1v1h-1zM24 28h2v1h-2zM27 28h2v1h-2z"/></svg>
+                        </div>
+                        <p>Наведите камеру телефона на код — откроется чат с Азаматом в WhatsApp.</p>
+                    </div>
+                </div>
+
+                <form class="composer rv" id="composer" style="--d:1" novalidate>
+                    <p class="composer__title">Сообщение в WhatsApp</p>
+                    <label class="field"><span>Ваше имя</span><input id="cName" name="name" type="text" autocomplete="name" placeholder="Например, Нурлан"></label>
+                    <label class="field"><span>Тема</span>
+                        <select id="cTopic" name="topic">
+                            <option>Общий вопрос</option>
+                            <option>Партнёрство</option>
+                            <option>PAR ORDO PRO — Управление баней</option>
+                            <option>PAR ORDO GO — Приложение для клиентов</option>
+                            <option>MOI MARKET PRO — Интернет-магазин</option>
+                            <option>MOI MARKET PRO — Система управления</option>
+                            <option>AZA CONNECT — Мессенджер</option>
+                            <option>AZA BUSINESS PRO — Управление бизнесом</option>
+                        </select>
+                    </label>
+                    <label class="field"><span>Сообщение</span><textarea id="cMessage" name="message" rows="4" placeholder="Коротко опишите, что вас интересует"></textarea></label>
+                    <a class="btn btn--gold btn--lg btn--block" id="composerSend" href="https://wa.me/996507668866" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg>Открыть в WhatsApp</a>
+                    <p class="composer__note" id="composerNote" role="status">Текст подставится в чат — останется нажать «Отправить».</p>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ============ ПОДВАЛ ============ -->
+<footer class="footer">
+    <div class="container footer__grid">
+        <div class="footer__brand">
+            <img src="assets/logo.svg" alt="AZA DIGITAL ECOSYSTEM" width="206" height="64">
+            <p>Экосистема цифровых продуктов для бизнеса и людей.</p>
+        </div>
+        <nav class="footer__nav" aria-label="Навигация в подвале">
+            <a href="#projects">Проекты</a>
+            <a href="#ecosystem">Экосистема</a>
+            <a href="#founder">Основатель</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+        <div class="footer__contact">
+            <p>WhatsApp</p>
+            <a href="https://wa.me/996507668866" target="_blank" rel="noopener" data-wa="Здравствуйте, Азамат! Пишу с сайта AZA DIGITAL ECOSYSTEM.">+996 507 66 88 66</a>
+            <p>Бишкек, Кыргызстан</p>
+        </div>
+    </div>
+    <div class="container footer__bottom">
+        <p>© <span id="year">2026</span> AZA DIGITAL ECOSYSTEM</p>
+        <p>Основатель — Азамат Акматов</p>
+    </div>
+</footer>
+
+<!-- ============ ОКНО «ПОДРОБНЕЕ» ============ -->
+<div class="modal" id="modal" hidden>
+    <div class="modal__scrim" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="mTitle" tabindex="-1">
+        <button class="modal__close" type="button" data-close aria-label="Закрыть"><svg><use href="#i-close"/></svg></button>
+        <div class="modal__head">
+            <span class="modal__ico"><svg><use id="mIcon" href="#i-steam"/></svg></span>
+            <div>
+                <h3 class="modal__title" id="mTitle">PAR ORDO PRO</h3>
+                <p class="modal__kind" id="mKind">Управление баней</p>
+            </div>
+        </div>
+        <span class="tag" id="mTag">Для владельцев бань</span>
+        <p class="modal__text" id="mText"></p>
+        <div class="modal__wa">
+            <p class="modal__label">WhatsApp основателя</p>
+            <a class="modal__num" id="mNum" href="https://wa.me/996507668866" target="_blank" rel="noopener">+996 507 66 88 66</a>
+            <p class="modal__who">Азамат Акматов, основатель AZA DIGITAL ECOSYSTEM</p>
+            <div class="modal__actions">
+                <a class="btn btn--gold" id="mWa" href="https://wa.me/996507668866" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg>Написать в WhatsApp</a>
+                <button class="btn btn--glass" type="button" data-copy="+996 507 66 88 66"><svg class="ico"><use href="#i-copy"/></svg>Скопировать номер</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
