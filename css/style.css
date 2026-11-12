@@ -1912,3 +1912,241 @@ html:not(.js) .intro { display: none; }
     }
     .band__track { transform: translateX(-12%); }
 }
+
+
+/* =====================================================================
+   AZA NEON ECOSYSTEM THEME — visual-only brand refresh
+   Preserves existing layout, component structure and animation timings.
+   ===================================================================== */
+:root {
+    --night: #03090D;
+    --night-2: #06151A;
+    --night-3: #0A242B;
+    --line: rgba(57, 236, 218, .14);
+    --line-strong: rgba(57, 236, 218, .27);
+    --snow: #F1FFFC;
+    --mist: #9BBFC0;
+    --glacier: #36E8F2;
+    --gold: #A8FF35;
+    --gold-2: #C9FF69;
+    --ember: #00D8F0;
+    --mint: #42FFD0;
+    --wa: #43E88E;
+}
+
+/* One continuous aurora layer sits behind the existing animated sky canvas. */
+.sky {
+    background:
+        radial-gradient(76% 55% at 78% -8%, rgba(0, 216, 240, .19) 0%, transparent 68%),
+        radial-gradient(68% 64% at -8% 92%, rgba(93, 255, 37, .13) 0%, transparent 68%),
+        radial-gradient(58% 52% at 52% 48%, rgba(0, 105, 111, .12) 0%, transparent 72%),
+        var(--night);
+    isolation: isolate;
+}
+.sky::before {
+    content: "";
+    position: absolute;
+    inset: -14%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: .56;
+    background:
+        radial-gradient(48% 32% at 18% 24%, rgba(34, 255, 106, .16), transparent 72%),
+        radial-gradient(42% 34% at 82% 30%, rgba(0, 222, 255, .18), transparent 74%),
+        radial-gradient(44% 30% at 55% 82%, rgba(0, 164, 154, .13), transparent 76%);
+    transform: translate3d(-1.5%, 0, 0) scale(1.02);
+    animation: aza-aurora-drift 26s ease-in-out infinite alternate;
+}
+.sky canvas { position: relative; z-index: 1; }
+.sky::after { z-index: 2; opacity: .035; }
+@keyframes aza-aurora-drift {
+    0% { transform: translate3d(-1.5%, -1%, 0) scale(1.02); }
+    100% { transform: translate3d(1.5%, 1%, 0) scale(1.06); }
+}
+
+/* Intro keeps its original curtain and logo-drawing sequence; only its palette changes. */
+.intro__half--top {
+    background:
+        radial-gradient(1px 1px at 12% 22%, #fff 50%, transparent),
+        radial-gradient(1px 1px at 34% 64%, rgba(255,255,255,.8) 50%, transparent),
+        radial-gradient(1.5px 1.5px at 72% 30%, #fff 50%, transparent),
+        radial-gradient(1px 1px at 88% 70%, rgba(255,255,255,.7) 50%, transparent),
+        radial-gradient(70% 90% at 50% 100%, rgba(0, 224, 236, .17), transparent 70%),
+        linear-gradient(180deg, #02080B 0%, #06232A 100%);
+}
+.intro__half--bottom {
+    background:
+        radial-gradient(1px 1px at 18% 40%, rgba(255,255,255,.7) 50%, transparent),
+        radial-gradient(1.5px 1.5px at 44% 78%, #fff 50%, transparent),
+        radial-gradient(1px 1px at 82% 34%, rgba(255,255,255,.8) 50%, transparent),
+        radial-gradient(70% 90% at 50% 0%, rgba(119, 255, 43, .13), transparent 70%),
+        linear-gradient(0deg, #02080B 0%, #06232A 100%);
+}
+.intro__seam {
+    background: linear-gradient(90deg, transparent, #A8FF35 25%, #E8FFFD 50%, #00D8F0 75%, transparent);
+    box-shadow: 0 0 22px 3px rgba(0, 226, 220, .62);
+}
+.intro__center::before { background: radial-gradient(circle, rgba(0, 225, 216, .22), transparent 65%); }
+.intro__bar i { background: linear-gradient(90deg, var(--gold), var(--ember)); }
+
+.menu {
+    background:
+        radial-gradient(80% 50% at 100% 0%, rgba(0, 216, 240, .15), transparent 62%),
+        radial-gradient(70% 45% at 0% 100%, rgba(168, 255, 53, .10), transparent 65%),
+        var(--night);
+}
+.btn--gold {
+    color: #03100D;
+    background: linear-gradient(115deg, #B9FF42 0%, #63FCA1 48%, #35E9F4 100%);
+    box-shadow: 0 12px 34px -12px rgba(42, 255, 171, .52), inset 0 1px 0 rgba(255, 255, 255, .62);
+}
+.btn--gold:hover {
+    box-shadow: 0 16px 44px -10px rgba(0, 228, 224, .68), inset 0 1px 0 rgba(255, 255, 255, .62);
+}
+:focus-visible { outline-color: var(--gold); }
+
+.hero::after {
+    background: radial-gradient(52% 46% at 24% 56%, rgba(3, 14, 18, .58), transparent 72%);
+}
+.hl__in {
+    background-image:
+        linear-gradient(100deg, transparent 42%, rgba(255, 255, 255, .98) 50%, transparent 58%),
+        linear-gradient(180deg, #FFFFFF 0%, #D9FFFA 38%, #B9FF65 78%, #31E9F2 100%);
+}
+.hero__lead { color: #C8E8E6; }
+.band--gold {
+    background: linear-gradient(100deg, #A8FF35 0%, #55F5A7 43%, #25DDEB 100%);
+    color: #03100D;
+    box-shadow: 0 18px 50px -12px rgba(0, 230, 190, .35);
+}
+.band--line { border-color: rgba(45, 232, 220, .38); color: #BCFFF2; }
+.band--line svg { color: var(--gold); }
+
+/* The existing founder portrait becomes a branded AZA emblem stage. */
+.founder__visual { position: relative; isolation: isolate; }
+.founder__visual::before {
+    content: "";
+    position: absolute;
+    inset: 7% -8%;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(48% 44% at 50% 42%, rgba(0, 228, 231, .18), transparent 74%),
+        radial-gradient(46% 38% at 42% 74%, rgba(143, 255, 43, .12), transparent 76%);
+    animation: founder-aura 8s ease-in-out infinite alternate;
+}
+@keyframes founder-aura {
+    from { opacity: .62; transform: scale(.96); }
+    to { opacity: 1; transform: scale(1.04); }
+}
+.portrait {
+    border-color: rgba(71, 241, 218, .45);
+    background:
+        radial-gradient(1px 1px at 14% 18%, #fff 50%, transparent),
+        radial-gradient(1px 1px at 32% 8%, rgba(255,255,255,.7) 50%, transparent),
+        radial-gradient(1.5px 1.5px at 58% 22%, #fff 50%, transparent),
+        radial-gradient(1px 1px at 80% 12%, rgba(255,255,255,.8) 50%, transparent),
+        radial-gradient(1px 1px at 90% 34%, rgba(255,255,255,.6) 50%, transparent),
+        radial-gradient(68% 46% at 50% 38%, rgba(0, 220, 222, .19), transparent 76%),
+        linear-gradient(180deg, #041219 0%, #082A31 62%, #06181E 100%);
+    box-shadow:
+        0 24px 70px -34px rgba(0, 0, 0, .9),
+        0 0 0 1px rgba(71, 241, 218, .10),
+        0 0 54px -24px rgba(0, 226, 218, .62),
+        inset 0 0 48px rgba(0, 218, 230, .08);
+}
+.portrait__sun {
+    background: radial-gradient(circle, rgba(196, 255, 111, .90) 0 8%, rgba(54, 237, 194, .42) 25%, rgba(0, 216, 240, .15) 48%, transparent 70%);
+}
+.portrait__ridge .r1 { fill: #0A3438; stroke: rgba(56, 239, 225, .52); }
+.portrait__ridge .r2 { fill: #041519; stroke: rgba(66, 255, 196, .28); }
+.portrait__mono {
+    position: absolute;
+    top: 12%;
+    left: 0;
+    right: 0;
+    display: grid;
+    justify-items: center;
+    gap: clamp(8px, 1.4vw, 15px);
+    z-index: 2;
+    font-family: inherit;
+    font-size: initial;
+    font-weight: initial;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: initial;
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
+    color: initial;
+    filter: none;
+}
+.portrait__emblem {
+    display: block;
+    width: clamp(104px, 13vw, 166px);
+    height: auto;
+    overflow: visible;
+    filter: drop-shadow(0 0 12px rgba(70, 255, 190, .48)) drop-shadow(0 12px 26px rgba(0, 0, 0, .45));
+}
+.portrait__wordmark {
+    display: block;
+    width: min(72%, 280px);
+    height: auto;
+    overflow: visible;
+    color: #F2FFFB;
+    filter: drop-shadow(0 4px 12px rgba(0, 220, 235, .42));
+}
+.portrait__ecosystem {
+    color: #BFFFF0;
+    font-family: var(--font-display);
+    font-size: clamp(9px, 1.05vw, 12px);
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-align: center;
+    text-shadow: 0 0 15px rgba(0, 226, 230, .7);
+}
+.portrait__ring {
+    top: 35%;
+    width: 82%;
+    border-color: rgba(87, 255, 214, .48);
+    border-style: solid;
+    border-width: 1px;
+    z-index: 1;
+    pointer-events: none;
+    box-shadow: 0 0 22px rgba(0, 221, 230, .12), inset 0 0 22px rgba(0, 221, 230, .06);
+}
+.portrait__ring::before {
+    background: #A8FF35;
+    box-shadow: 0 0 16px 4px rgba(168, 255, 53, .72);
+}
+.founder__role { color: var(--gold-2); }
+.founder__name span {
+    background: linear-gradient(180deg, #FFFFFF 0%, #D8FFFA 45%, #B8FF6B 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.j-r1 { fill: rgba(43, 236, 224, .08); stroke: rgba(43, 236, 224, .36); }
+.j-r2 { fill: rgba(43, 236, 224, .13); stroke: rgba(43, 236, 224, .22); }
+.j-path { stroke: #A8FF35; }
+.j-pin { stroke: #6DEFE0; }
+.j-pin--now { fill: #A8FF35; stroke: #E5FFC0; }
+.j-pulse { stroke: #A8FF35; }
+
+/* Unified glow on the ecosystem map and the page footer. */
+.hub__ring { stroke: rgba(75, 237, 222, .22); }
+.hub__ring--3 { stroke: rgba(75, 237, 222, .10); }
+.hub__link { stroke: rgba(75, 237, 222, .25); }
+.hub__pulse { stroke: #A8FF35; }
+.hub__core {
+    background: radial-gradient(circle, rgba(43, 255, 187, .20), rgba(4, 34, 40, .94) 65%);
+    border-color: rgba(66, 255, 210, .42);
+    box-shadow: 0 0 60px -10px rgba(0, 220, 220, .42);
+}
+.footer { background: linear-gradient(180deg, rgba(3, 14, 18, .18), rgba(3, 14, 18, .94)); }
+.footer__nav a:hover, .footer__contact a:hover { color: var(--gold-2); }
+.field input:focus, .field select:focus, .field textarea:focus { box-shadow: 0 0 0 3px rgba(0, 216, 220, .16); }
+
+@media (prefers-reduced-motion: reduce) {
+    .sky::before, .founder__visual::before { animation: none; }
+}
