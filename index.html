@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AZA Digital Ecosystem — объединяем цифровые продукты в одну экосистему: финтех, e-commerce, облака, образование и госуслуги.">
+    <title>AZA Digital Ecosystem — цифровая экосистема</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== ШАПКА ===== -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#hero" class="logo" aria-label="AZA Digital Ecosystem">
+                <svg class="logo__mark" width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+                    <rect width="34" height="34" rx="9" fill="url(#g1)"/>
+                    <path d="M10 24L17 9l7 15" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.2 18.5h7.6" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="g1" x1="0" y1="0" x2="34" y2="34">
+                            <stop stop-color="#4F7CFF"/><stop offset="1" stop-color="#9B5CFF"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo__text">AZA<em>digital</em></span>
+            </a>
+
+            <nav class="nav" id="nav" aria-label="Основная навигация">
+                <a href="#projects" class="nav__link">Проекты</a>
+                <a href="#ecosystem" class="nav__link">Экосистема</a>
+                <a href="#advantages" class="nav__link">Преимущества</a>
+                <a href="#about" class="nav__link">О нас</a>
+                <a href="#contact" class="nav__link">Контакты</a>
+                <a href="#contact" class="btn btn--small nav__cta">Связаться</a>
+            </nav>
+
+            <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== ГЛАВНЫЙ ЭКРАН ===== -->
+        <section class="hero" id="hero">
+            <div class="hero__glow hero__glow--1"></div>
+            <div class="hero__glow hero__glow--2"></div>
+            <div class="container hero__inner">
+                <span class="badge reveal">Презентация цифровой экосистемы</span>
+                <h1 class="hero__title reveal">AZA <span>Digital</span> Ecosystem</h1>
+                <p class="hero__subtitle reveal">
+                    Объединяем финтех, e-commerce, облачные сервисы, образование
+                    и государственные услуги в единую цифровую среду —
+                    удобную для людей и бизнеса.
+                </p>
+                <div class="hero__actions reveal">
+                    <a href="#projects" class="btn">Смотреть проекты</a>
+                    <a href="#contact" class="btn btn--ghost">Стать партнёром</a>
+                </div>
+
+                <div class="stats reveal">
+                    <div class="stat">
+                        <div class="stat__value" data-count="6" data-suffix="+">0</div>
+                        <div class="stat__label">цифровых продуктов</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value" data-count="1" data-suffix="M+">0</div>
+                        <div class="stat__label">пользователей</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value" data-count="99" data-suffix="%">0</div>
+                        <div class="stat__label">время доступности</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat__value" data-count="24" data-suffix="/7">0</div>
+                        <div class="stat__label">поддержка</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ПРОЕКТЫ (для презентации) ===== -->
+        <section class="section section--alt" id="projects">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="badge badge--outline">Проекты</span>
+                    <h2 class="section__title">Проекты экосистемы</h2>
+                    <p class="section__text">Нажмите «Подробнее», чтобы показать детали проекта на презентации.</p>
+                </div>
+
+                <div class="projects">
+                    <article class="project reveal">
+                        <div class="project__visual project__visual--1">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20M6 15h4"/></svg>
+                            <span class="project__badge">Финтех</span>
+                        </div>
+                        <div class="project__body">
+                            <h3 class="project__title">AZA Pay</h3>
+                            <p class="project__text">Платформа цифровых платежей и переводов.</p>
+                            <button class="btn btn--ghost btn--small" data-project="aza-pay">Подробнее</button>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project__visual project__visual--2">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2 3h3l2.6 12h11L22 7H6"/></svg>
+                            <span class="project__badge">E-commerce</span>
+                        </div>
+                        <div class="project__body">
+                            <h3 class="project__title">AZA Market</h3>
+                            <p class="project__text">Маркетплейс локальных брендов и товаров.</p>
+                            <button class="btn btn--ghost btn--small" data-project="aza-market">Подробнее</button>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project__visual project__visual--3">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h13v9H1zM14 11h4l4 3v3h-8z"/><circle cx="6" cy="19" r="1.8"/><circle cx="17.5" cy="19" r="1.8"/></svg>
+                            <span class="project__badge">Логистика</span>
+                        </div>
+                        <div class="project__body">
+                            <h3 class="project__title">AZA Delivery</h3>
+                            <p class="project__text">Сервис доставки за один час.</p>
+                            <button class="btn btn--ghost btn--small" data-project="aza-delivery">Подробнее</button>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project__visual project__visual--4">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10a5 5 0 0 0-9.3-2.4A4.2 4.2 0 0 0 7 15h11a3.5 3.5 0 0 0 0-7z"/></svg>
+                            <span class="project__badge">B2B</span>
+                        </div>
+                        <div class="project__body">
+                            <h3 class="project__title">AZA Cloud</h3>
+                            <p class="project__text">Облачная инфраструктура для бизнеса.</p>
+                            <button class="btn btn--ghost btn--small" data-project="aza-cloud">Подробнее</button>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project__visual project__visual--5">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+                            <span class="project__badge">EdTech</span>
+                        </div>
+                        <div class="project__body">
+                            <h3 class="project__title">AZA Academy</h3>
+                            <p class="project__text">Платформа цифрового образования.</p>
+                            <button class="btn btn--ghost btn--small" data-project="aza-academy">Подробнее</button>
+                        </div>
+                    </article>
+
+                    <article class="project reveal">
+                        <div class="project__visual project__visual--6">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/><path d="M9 11.5l2 2 4-4.5"/></svg>
+                            <span class="project__badge">GovTech</span>
+                        </div>
+                        <div class="project__body">
+                            <h3 class="project__title">AZA Gov</h3>
+                            <p class="project__text">Госуслуги в цифровом формате.</p>
+                            <button class="btn btn--ghost btn--small" data-project="aza-gov">Подробнее</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ЭКОСИСТЕМА / НАПРАВЛЕНИЯ ===== -->
+        <section class="section" id="ecosystem">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="badge badge--outline">Экосистема</span>
+                    <h2 class="section__title">Как устроена экосистема</h2>
+                    <p class="section__text">Каждое направление решает свою задачу, а вместе они создают бесшовный цифровой опыт.</p>
+                </div>
+
+                <div class="grid">
+                    <article class="card reveal">
+                        <div class="card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20M6 15h4"/></svg>
+                        </div>
+                        <h3 class="card__title">Финансы</h3>
+                        <p class="card__text">Платежи, переводы, цифровые карты и финансовая аналитика в одном приложении.</p>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M2 3h3l2.6 12h11L22 7H6"/></svg>
+                        </div>
+                        <h3 class="card__title">Коммерция</h3>
+                        <p class="card__text">Маркетплейс с тысячами товаров и локальных брендов: быстрая доставка и безопасные покупки.</p>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h13v9H1zM14 11h4l4 3v3h-8z"/><circle cx="6" cy="19" r="1.8"/><circle cx="17.5" cy="19" r="1.8"/></svg>
+                        </div>
+                        <h3 class="card__title">Логистика</h3>
+                        <p class="card__text">Доставка еды, товаров и документов — в течение часа в крупных городах.</p>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10a5 5 0 0 0-9.3-2.4A4.2 4.2 0 0 0 7 15h11a3.5 3.5 0 0 0 0-7z"/></svg>
+                        </div>
+                        <h3 class="card__title">Облака</h3>
+                        <p class="card__text">Облачная инфраструктура для бизнеса: хранение данных, вычисления и масштабирование.</p>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+                        </div>
+                        <h3 class="card__title">Образование</h3>
+                        <p class="card__text">Курсы цифровых профессий, тренажёры и корпоративное обучение.</p>
+                    </article>
+
+                    <article class="card reveal">
+                        <div class="card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10z"/><path d="M9 11.5l2 2 4-4.5"/></svg>
+                        </div>
+                        <h3 class="card__title">Госсектор</h3>
+                        <p class="card__text">Цифровые государственные услуги: документы, справки и заявления — онлайн, без очередей.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ПРЕИМУЩЕСТВА ===== -->
+        <section class="section section--alt" id="advantages">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="badge badge--outline">Почему мы</span>
+                    <h2 class="section__title">Преимущества экосистемы</h2>
+                </div>
+
+                <div class="grid grid--4">
+                    <div class="feature reveal">
+                        <div class="feature__num">01</div>
+                        <h3>Безопасность</h3>
+                        <p>Шифрование данных, двухфакторная аутентификация и соответствие международным стандартам.</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="feature__num">02</div>
+                        <h3>Единый аккаунт</h3>
+                        <p>Один логин для всех продуктов экосистемы — без повторных регистраций и паролей.</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="feature__num">03</div>
+                        <h3>Скорость</h3>
+                        <p>Современная инфраструктура: страницы и операции выполняются мгновенно.</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="feature__num">04</div>
+                        <h3>Поддержка 24/7</h3>
+                        <p>Команда поддержки на русском, казахском и английском языках — в любое время суток.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== О НАС ===== -->
+        <section class="section" id="about">
+            <div class="container about">
+                <div class="about__text reveal">
+                    <span class="badge badge--outline">О нас</span>
+                    <h2 class="section__title">Миссия AZA</h2>
+                    <p>
+                        Мы создаём цифровую среду, в которой жизнь человека и работа
+                        бизнеса становятся проще. AZA Digital Ecosystem объединяет
+                        сервисы повседневного спроса в одной платформе и открывает
+                        новые возможности для партнёров и разработчиков.
+                    </p>
+                    <ul class="about__list">
+                        <li>Инновации — основа каждого продукта</li>
+                        <li>Ориентация на пользователя</li>
+                        <li>Открытость к партнёрству и интеграциям</li>
+                    </ul>
+                    <a href="#contact" class="btn">Сотрудничать с нами</a>
+                </div>
+                <div class="about__visual reveal" aria-hidden="true">
+                    <div class="orbit">
+                        <div class="orbit__core">AZA</div>
+                        <div class="orbit__ring orbit__ring--1"><span>Pay</span><span>Cloud</span></div>
+                        <div class="orbit__ring orbit__ring--2"><span>Market</span><span>Academy</span><span>Delivery</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== КОНТАКТЫ ===== -->
+        <section class="section section--alt" id="contact">
+            <div class="container">
+                <div class="section__head reveal">
+                    <span class="badge badge--outline">Контакты</span>
+                    <h2 class="section__title">Свяжитесь с нами</h2>
+                    <p class="section__text">Расскажите о задаче — мы предложим решение в течение рабочего дня.</p>
+                </div>
+
+                <div class="contact">
+                    <form class="form reveal" id="contactForm" novalidate>
+                        <div class="form__row">
+                            <div class="form__field">
+                                <label for="name">Имя</label>
+                                <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form__field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form__field">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Чем мы можем помочь?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--full">Отправить сообщение</button>
+                        <p class="form__status" id="formStatus" role="status"></p>
+                    </form>
+
+                    <div class="contact__info reveal">
+                        <div class="contact__item">
+                            <h4>Email</h4>
+                            <p>hello@aza-digital.kz</p>
+                        </div>
+                        <div class="contact__item">
+                            <h4>Телефон</h4>
+                            <p>+7 (700) 000-00-00</p>
+                        </div>
+                        <div class="contact__item">
+                            <h4>Офис</h4>
+                            <p>г. Алматы, проспект Достык, 0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== ПОДВАЛ ===== -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <span class="logo__text">AZA<em>digital</em></span>
+                <p>Цифровая экосистема для жизни и бизнеса.</p>
+            </div>
+            <nav class="footer__nav" aria-label="Навигация в подвале">
+                <a href="#projects">Проекты</a>
+                <a href="#ecosystem">Экосистема</a>
+                <a href="#advantages">Преимущества</a>
+                <a href="#about">О нас</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+            <div class="footer__social">
+                <!-- Замените ссылки на реальные соцсети -->
+                <a href="#" aria-label="LinkedIn">in</a>
+                <a href="#" aria-label="Instagram">ig</a>
+                <a href="#" aria-label="X (Twitter)">x</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; <span id="year"></span> AZA Digital Ecosystem. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- ===== МОДАЛЬНОЕ ОКНО ПРОЕКТА ===== -->
+    <div class="modal" id="projectModal" aria-hidden="true">
+        <div class="modal__overlay" data-modal-close></div>
+        <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal__close" data-modal-close aria-label="Закрыть">&times;</button>
+            <span class="badge badge--outline" id="modalCategory"></span>
+            <h3 class="modal__title" id="modalTitle"></h3>
+            <p class="modal__text" id="modalDescription"></p>
+            <div class="modal__block">
+                <h4>Технологии</h4>
+                <div class="modal__tags" id="modalTech"></div>
+            </div>
+            <div class="modal__block">
+                <h4>Результаты</h4>
+                <ul class="modal__results" id="modalResults"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
